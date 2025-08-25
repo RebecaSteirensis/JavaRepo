@@ -4,9 +4,7 @@ import java.util.*;
 
 public class Producto
 {
-    /**
-     * Atributtes of class Producto
-     */
+    // Atributos
     private int codigo;
     private String rubro;
     private String descripcion;
@@ -15,165 +13,70 @@ public class Producto
     private double porcPtoRepo;
     private int existMinima;
     private Laboratorio laboratorio;
-    
-    /**
-     * Constructor for objects of class Producto
-     */
-    public Producto()
-    {
-        //
-        
+
+    // Constructor completo
+    public Producto(int p_codigo, String p_rubro, String p_desc, double p_costo,
+                    double p_porcPtoRepo, int p_existMinima, Laboratorio p_lab){
+        this.setCodigo(p_codigo);
+        this.setRubro(p_rubro);
+        this.setDescripcion(p_desc);
+        this.setCosto(p_costo);
+        this.setPorcPtoRepo(p_porcPtoRepo);
+        this.setExistMinima(p_existMinima);
+        this.setLaboratorio(p_lab);
+        this.setStock(0);
     }
 
-    /**
-     * Constructor con parametros, instancia un objeto de la clase.
-     * @param p_nombre
-     * @param p_domicilio
-     * @param p_telefono
-     * @param p_compraMin
-     * @param p_diaEnt
-     */
-    public Laboratorio(String p_nombre, String p_domicilio, String p_telefono, int p_compraMin, int p_diaEnt)
-    {
-        this.setNombre(p_nombre);
-        this.setDomicilio(p_domicilio);
-        this.setTelefono(p_telefono);
-        this.setCompraMinima(p_compraMin);
-        this.setDiaEntrega(p_diaEnt);
+    // Constructor alternativo
+    public Producto(int p_codigo, String p_rubro, String p_desc, double p_costo, Laboratorio p_lab){
+        this(p_codigo, p_rubro, p_desc, p_costo, 0.0, 0, p_lab);
     }
-    
-    /**
-     * Constructor con parametros, instancia un objeto de la clase.
-     * @param p_nombre
-     * @param p_domicilio
-     * @param p_telefono
-     */
-    public Laboratorio(String p_nombre, String p_domicilio, String p_telefono){
-        setNombre(p_nombre);
-        setDomicilio(p_domicilio);
-        setTelefono(p_telefono);
-    }
-    
-    //Setters and Getters
-    /**
-     * Mutador Setter, recibe un objeto de tipo String y permite modificar el estado del atributo nombre.
-     * @param p_nombre
-     */
-    private void setNombre(String p_nombre){
-        this.nombre = p_nombre;
-    }
-    
-    /**
-     * Mutador Setter, recibe un objeto de tipo String y permite modificar el estado del atributo domicilio.
-     * @param p_domicilio
-     */
-    private void setDomicilio(String p_domicilio){
-        this.domicilio = p_domicilio;
-    }
-    
-    /**
-     * Mutador Setter, recibe un objeto de tipo String y permite modificar el estado del atributo telefono.
-     * @param p_telefono
-     */
-    private void setTelefono(String p_telefono){
-        this.telefono = p_telefono;
-    }
-    
-    /**
-     * Mutador Setter, recibe un tipo de dato entero y permite modificar el estado del atributo compraMinima. 
-     * @param p_compraMin
-     */
-    private void setCompraMinima(int p_compraMin){
-        this.compraMinima = p_compraMin;
-    }
-    
-    /**
-     * Mutador Setter, recibe un tipo de dato entero y permite modificar el estado del atributo diaEntrega. 
-     * @param p_diaEnt
-     */
-    private void setDiaEntrega(int p_diaEnt){
-        this.diaEntrega = p_diaEnt;
-    }
-    
-    /**
-     * Accesor Getter, permite obtener el estado del atributo nombre.
-     * @return retorna un objeto de tipo String.
-     */
-    public String getNombre(){
-        return this.nombre;
-    }
-    
-    /**
-     * Accesor Getter, permite obtener el estado del atributo domicilio.
-     * @return retorna un objeto de tipo String.
-     */
-    public String getDomicilio(){
-        return this.domicilio;
-    }
-    
-    /**
-     * Accesor Getter, permite obtener el estado del atributo telefono.
-     * @return retorna un objeto de tipo String.
-     */
-    public String getTelefono(){
-        return this.telefono;
-    }
-    
-    /** 
-     * Accesor Getter, permite obtener el estado del atributo compraMinima.
-     * @return retorna un tipo de dato entero.
-     */
-    public int getCompraMinima(){
-        return this.compraMinima;
-    }
-    
-    /** 
-     * Accesor Getter, permite obtener el estado del atributo compraMinima.
-     * @return retorna un tipo de dato entero.
-     */
-    public int getDiaEntrega(){
-        return this.diaEntrega;
-    }
-    
-    //Methods
-    /**
-     * Método publico, recibe por parametro un tipo de dato entero y utiliza el método setCompraMinima para 
-     * modificar el estado del atributo compraMinima por el estado recibido por parametro. 
-     * @param p_compraMin
-     */
-    public void nuevaCompraMinima(int p_compraMin)
-    {
-        this.setCompraMinima(p_compraMin);
-    }
-    
-    /**
-     * Método publico, recibe por parametro un tipo de dato entero y utiliza el método setDiaEntrega para 
-     * modificar el estado del atributo diaEntrega por el estado recibido por parametro. 
-     * @param p_diaEnt
-     */
-    public void nuevoDiaEntrega(int p_diaEnt){
-        this.setDiaEntrega(p_diaEnt);
-    }
-    
-    /**
-     * Método publico, utiliza los métodos getNombre, getDomicilio y getTelefono para formar una cadena de texto 
-     * con sus respectivas descripciones junto a los estados de los objetos.
-     * @return retorna un objeto de tipo String.
-     */
+
+    // Setters privados
+    private void setCodigo(int p_codigo){ this.codigo = p_codigo; }
+    private void setRubro(String p_rubro){ this.rubro = p_rubro; }
+    private void setDescripcion(String p_desc){ this.descripcion = p_desc; }
+    private void setCosto(double p_costo){ this.costo = p_costo; }
+    private void setStock(int p_stock){ this.stock = p_stock; }
+    private void setPorcPtoRepo(double p_porc){ this.porcPtoRepo = p_porc; }
+    private void setExistMinima(int p_existMinima){ this.existMinima = p_existMinima; }
+    private void setLaboratorio(Laboratorio p_lab){ this.laboratorio = p_lab; }
+
+    // Getters públicos
+    public int getCodigo(){ return this.codigo; }
+    public String getRubro(){ return this.rubro; }
+    public String getDescripcion(){ return this.descripcion; }
+    public double getCosto(){ return this.costo; }
+    public int getStock(){ return this.stock; }
+    public double getPorcPtoRepo(){ return this.porcPtoRepo; }
+    public int getExistMinima(){ return this.existMinima; }
+    public Laboratorio getLaboratorio(){ return this.laboratorio; }
+
+    // Métodos públicos
+    public void ajuste(int p_cantidad){ this.setStock(this.getStock() + p_cantidad); }
+
+    public double stockValorizado(){ return this.getStock() * this.getCosto() * 1.12; }
+
+    public double precioLista(){ return this.getCosto() * 1.12; }
+
+    public double precioContado(){ return this.precioLista() * 0.95; }
+
+    public void ajustarPtoRepo(double p_porc){ this.setPorcPtoRepo(p_porc); }
+
+    public void ajustarExistMin(int p_cant){ this.setExistMinima(p_cant); }
+
     public String mostrar(){
-        return "Laboratorio: " + getNombre() + "\nDomicilio: " + getDomicilio() + " - Telefono: " + getTelefono();
+        return this.getLaboratorio().mostrar() +
+               "\nRubro: " + this.getRubro() +
+               "\nDescripción: " + this.getDescripcion() +
+               "\nPrecio Costo: " + this.getCosto() +
+               "\nStock: " + this.getStock() +
+               " - Stock Valorizado: $" + this.stockValorizado();
     }
-}
-    
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+
+    public String mostrarLinea(){
+        return this.getDescripcion() +
+               " - Lista: $" + this.precioLista() +
+               " - Contado: $" + this.precioContado();
     }
 }

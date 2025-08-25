@@ -38,9 +38,9 @@ public class Laboratorio
      * @param p_telefono
      */
     public Laboratorio(String p_nombre, String p_domicilio, String p_telefono){
-        setNombre(p_nombre);
-        setDomicilio(p_domicilio);
-        setTelefono(p_telefono);
+        this.setNombre(p_nombre);
+        this.setDomicilio(p_domicilio);
+        this.setTelefono(p_telefono);
     }
     
     //Setters and Getters
