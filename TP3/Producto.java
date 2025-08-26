@@ -14,7 +14,7 @@ public class Producto
     private int existMinima;
     private Laboratorio laboratorio;
 
-    // Constructor completo
+    // Constructor completo de consulta
     public Producto(int p_codigo, String p_rubro, String p_desc, double p_costo,
                     double p_porcPtoRepo, int p_existMinima, Laboratorio p_lab){
         this.setCodigo(p_codigo);
@@ -29,7 +29,12 @@ public class Producto
 
     // Constructor alternativo
     public Producto(int p_codigo, String p_rubro, String p_desc, double p_costo, Laboratorio p_lab){
-        this(p_codigo, p_rubro, p_desc, p_costo, 0.0, 0, p_lab);
+        this.setCodigo(p_codigo);
+        this.setRubro(p_rubro);
+        this.setDescripcion(p_desc);
+        this.setCosto(p_costo);
+        this.setLaboratorio(p_lab);
+        this.setStock(0);
     }
 
     // Setters privados
