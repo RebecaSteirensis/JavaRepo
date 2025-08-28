@@ -127,7 +127,7 @@ public class Producto
     }
 
     public String mostrar(){
-        return this.getLaboratorio().mostrar() + "\n Domicilio: " + this.getLaboratorio().getDomicilio() + "\nRubro: " + this.getRubro() + "\nDescripción: " + this.getDescripcion() + "\nPrecio Costo: " + this.getCosto() + "\nStock: " + this.getStock() + " - Stock Valorizado: $" + this.stockValorizado();
+        return this.getLaboratorio().mostrar() + "\nRubro: " + this.getRubro() + "\nDescripción: " + this.getDescripcion() + "\nPrecio Costo: " + this.getCosto() + "\nStock: " + this.getStock() + " - Stock Valorizado: $" + this.stockValorizado();
     }
 
     public String mostrarLinea(){
