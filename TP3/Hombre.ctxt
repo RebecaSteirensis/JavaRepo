@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Hombre
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Hombre\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nombre\ apellido\ edad
+comment1.target=Hombre(java.lang.String,\ java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Hombre\r\n
+comment2.params=
+comment2.target=java.lang.String\ datos()
+comment3.params=
+comment3.target=void\ mostrarEstadoCivil()
+comment4.params=m
+comment4.target=void\ casarseCon(Mujer)
+comment5.params=
+comment5.target=void\ divorcio()
+comment6.params=
+comment6.target=void\ casadoCon()
+comment7.params=m
+comment7.target=void\ setEsposa(Mujer)
+comment8.params=estado
+comment8.target=void\ setEstadoCivil(java.lang.String)
+numComments=9

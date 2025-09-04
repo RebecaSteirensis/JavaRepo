@@ -2,7 +2,7 @@
 comment0.target=CuentaBancaria
 comment1.params=p_nroCuenta\ p_titular
 comment1.target=CuentaBancaria(int,\ Persona)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ CuentaBancaria\n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ CuentaBancaria\r\n
 comment10.params=p_importe
 comment10.target=double\ extraer(double)
 comment11.params=

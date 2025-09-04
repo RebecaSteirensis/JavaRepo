@@ -6,6 +6,8 @@
 
 //Imports
 import java.util.*;
+import java.util.Calendar.*;
+import java.util.GregorianCalendar.*;
 
 public class Persona
 {
@@ -165,5 +167,15 @@ public class Persona
     public void mostrar(){
         System.out.println("Nombre y Apellido: " + getNombre() + " " + getApellido());
         System.out.println("DNI: " + getDNI() + "\t Edad: " + edad() + " años");
+    }
+    
+    public boolean esCumpleanios() {
+        Calendar hoy = new GregorianCalendar();
+        
+        if((hoy.get(Calendar.DAY_OF_MONTH) == this.fechaDeNacimiento.get(Calendar.DAY_OF_MONTH) && hoy.get(Calendar.MONTH) == this.fechaDeNacimiento.get(Calendar.MONTH))){
+            return true;
+            } else {
+                return false;
+            }
     }
 }
