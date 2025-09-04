@@ -16,7 +16,7 @@ public class Persona
     private int nroDni;
     private String nombre;
     private String apellido;
-    private int anioNacimiento;
+    private Calendar fechaDeNacimiento;
 
     /**
      * Constructor con parametros, instancia un objeto de la clase.
@@ -31,6 +31,13 @@ public class Persona
        this.setNombre(p_nombre);
        this.setApellido(p_apellido);
        this.setAnioNacimiento(p_anio);
+    }
+    
+    public Persona(int p_dni, String p_nombre, String p_apellido, Calendar p_fecha){
+        this.setDNI(p_dni);
+        this.setNombre(p_nombre);
+        this.setApellido(p_apellido);
+        this.setFechaNacimiento(p_fecha);
     }
 
     //Setters and Getters
@@ -67,7 +74,13 @@ public class Persona
      */
     private void setAnioNacimiento(int p_anio)
     {
-      this.anioNacimiento = p_anio;
+        Calendar fecha = new GregorianCalendar(p_anio, 01, 01);
+        this.fechaDeNacimiento = fecha;
+    }
+    
+    private void setFechaNacimiento(Calendar p_fecha)
+    {
+        this.fechaDeNacimiento = p_fecha;
     }
     
     /**
@@ -99,7 +112,11 @@ public class Persona
      * @return retorna un tipo de dato entero.
      */
     public int getAnioNacimiento(){
-        return this.anioNacimiento;
+        return this.fechaDeNacimiento.get(Calendar.YEAR);
+    }
+    
+    public Calendar getFechaNacimiento(){
+        return this.fechaDeNacimiento;
     }
     
     //Methods
