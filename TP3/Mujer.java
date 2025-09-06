@@ -31,29 +31,39 @@ class Mujer {
         System.out.println(datos() + " - " + estadoCivil);
     }
     
-     public void casarseCon(Hombre h) {
-        this.esposo = h;
-        this.estadoCivil = "Casada";
-        h.setEsposa(this);
-        h.setEstadoCivil("Casado");
+    public void casarseCon(Hombre h) {
+        this.setEsposo(h);
+        this.setEstadoCivil("Casada");
+        h.confirmarMatrimonio(this); // delega al hombre
     }
 
+    public void confirmarMatrimonio(Hombre h) {
+        this.setEsposo(h);
+        this.setEstadoCivil("Casada");
+    }
+    
     public void divorcio() {
         if (this.esposo != null) {
-            this.esposo.setEsposa(null);
-            this.esposo.setEstadoCivil("Divorciada");
-            this.esposo = null;
+            Hombre ex = this.esposo;
+            this.setEsposo(null);
+            this.setEstadoCivil("Divorciada");
+            ex.confirmarDivorcio(); // delega al hombre
         }
-        this.estadoCivil = "Divorciada";
     }
 
+    public void confirmarDivorcio() {
+        this.setEsposo(null);
+        this.setEstadoCivil("Divorciada");
+    }
+    
     public void casadoCon() {
         if (esposo != null) {
             System.out.println(datos() + " está casada con " + esposo.datos());
         }
     }
 
-    // Setters auxiliares
-    public void setEsposo(Hombre h) { this.esposo = h; }
-    public void setEstadoCivil(String estado) { this.estadoCivil = estado; }
+    public Hombre getEsposo() { return esposo; }
+    
+    private void setEsposo(Hombre h) { this.esposo = h; }
+    private void setEstadoCivil(String estado) { this.estadoCivil = estado; }
 }

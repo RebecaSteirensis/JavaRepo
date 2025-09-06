@@ -18,5 +18,13 @@ public class RegistroCivil {
 
         m1.mostrarEstadoCivil();
         h1.mostrarEstadoCivil();
+        
+        m1.casadoCon();
+        h1.casadoCon();
+        
+        System.out.println("\n--- Se divorcian ---");
+        m1.divorcio();
+        m1.mostrarEstadoCivil();
+        h1.mostrarEstadoCivil();
     }
 }

@@ -32,28 +32,39 @@ class Hombre
         System.out.println(datos() + " - " + estadoCivil);
     }
     
-    public void casarseCon (Mujer m) {
-        this.esposa = m;
-        this.estadoCivil = "casado";
-        m.setEsposo(this);
-        m.setEstadoCivil("casada");
+    public void casarseCon(Mujer m) {
+        this.setEsposa(m);
+        this.setEstadoCivil("Casado");
+        m.confirmarMatrimonio(this); // delega a la mujer
+    }
+    
+    public void confirmarMatrimonio(Mujer m) {
+        this.setEsposa(m);
+        this.setEstadoCivil("Casado");
     }
     
     public void divorcio() {
         if (this.esposa != null) {
-            this.esposa.setEsposo(null);
-            this.esposa.setEstadoCivil("Divorciada");
-            this.esposa = null;
+            Mujer ex = this.esposa;
+            this.setEsposa(null);
+            this.setEstadoCivil("Divorciado");
+            ex.confirmarDivorcio(); // delega a la mujer
         }
-        this.estadoCivil = "Divorciado";
+    }
+    
+    public void confirmarDivorcio() {
+        this.setEsposa(null);
+        this.setEstadoCivil("Divorciado");
     }
     
     public void casadoCon() {
         if (esposa != null) {
-            System.out.println(datos() + "está casado con " + esposa.datos());
+            System.out.println(datos() + " está casado con " + esposa.datos());
         }
     }
     
-    public void setEsposa(Mujer m) { this.esposa = m; }
-    public void setEstadoCivil(String estado) { this.estadoCivil = estado; }
+    public Mujer getEsposa() { return esposa; }
+    
+    private void setEsposa(Mujer m) { this.esposa = m; }
+    private void setEstadoCivil(String estado) { this.estadoCivil = estado; }
 }
