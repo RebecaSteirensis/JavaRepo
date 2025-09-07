@@ -65,18 +65,30 @@ dependency8.type=UsesDependency
 dependency9.from=Escuela
 dependency9.to=Docente
 dependency9.type=UsesDependency
+<<<<<<< Updated upstream
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+=======
+editor.fx.0.height=944
+editor.fx.0.width=757
+editor.fx.0.x=755
+editor.fx.0.y=38
+>>>>>>> Stashed changes
 objectbench.height=100
 objectbench.width=1221
 package.divider.horizontal=0.6
 package.divider.vertical=0.8285256410256411
 package.editor.height=495
 package.editor.width=1115
+<<<<<<< Updated upstream
 package.editor.x=473
 package.editor.y=163
+=======
+package.editor.x=187
+package.editor.y=134
+>>>>>>> Stashed changes
 package.frame.height=688
 package.frame.width=1245
 package.numDependencies=22

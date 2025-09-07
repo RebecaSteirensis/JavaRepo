@@ -132,7 +132,7 @@ public class Persona
         Calendar fechaHoy = new GregorianCalendar();
         int anioHoy = fechaHoy.get(Calendar.YEAR);
         
-        return anioHoy - getAnioNacimiento();
+        return anioHoy - this.getAnioNacimiento();
     }
     
     /**
