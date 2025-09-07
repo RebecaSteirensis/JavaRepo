@@ -15,6 +15,7 @@ public class RegistroCivil {
 
         System.out.println("\n--- Se casan ---");
         m1.casarseCon(h1);
+        h1.casarseCon(m1);
 
         m1.mostrarEstadoCivil();
         h1.mostrarEstadoCivil();
@@ -24,6 +25,7 @@ public class RegistroCivil {
         
         System.out.println("\n--- Se divorcian ---");
         m1.divorcio();
+        h1.divorcio();
         m1.mostrarEstadoCivil();
         h1.mostrarEstadoCivil();
     }
