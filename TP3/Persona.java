@@ -6,8 +6,6 @@
 
 //Imports
 import java.util.*;
-import java.util.Calendar.*;
-import java.util.GregorianCalendar.*;
 
 public class Persona
 {
@@ -172,7 +170,7 @@ public class Persona
     public boolean esCumpleanios() {
         Calendar hoy = new GregorianCalendar();
         
-        if((hoy.get(Calendar.DAY_OF_MONTH) == this.fechaDeNacimiento.get(Calendar.DAY_OF_MONTH) && hoy.get(Calendar.MONTH) == this.fechaDeNacimiento.get(Calendar.MONTH))){
+        if((hoy.get(Calendar.DAY_OF_MONTH) == this.getFechaNacimiento().get(Calendar.DAY_OF_MONTH) && hoy.get(Calendar.MONTH)+1 == this.getFechaNacimiento().get(Calendar.MONTH)+1)){
             return true;
             } else {
                 return false;
