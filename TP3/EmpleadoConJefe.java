@@ -1,10 +1,3 @@
-
-/**
- * Write a description of class EmpleadoConJefe here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 import java.util.*;
 
 public class EmpleadoConJefe {
@@ -17,27 +10,32 @@ public class EmpleadoConJefe {
 
     // Constructor con jefe explícito
     public EmpleadoConJefe(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha, EmpleadoConJefe p_jefe) {
-        this.cuil = p_cuil;
-        this.apellido = p_apellido;
-        this.nombre = p_nombre;
-        this.sueldoBasico = p_importe;
-        this.fechaIngreso = p_fecha;
-        this.jefe = p_jefe;
+        this.setCuil(p_cuil); 
+        this.setApellido(p_apellido);
+        this.setNombre(p_nombre);
+        this.setSueldoBasico(p_importe);
+        this.setFechaIngreso(p_fecha);
+        this.setJefe(p_jefe);
     }
 
     // Constructor sin jefe (Gerente General)
     public EmpleadoConJefe(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha) {
-        this(p_cuil, p_apellido, p_nombre, p_importe, p_fecha, null);
+        this.setCuil(p_cuil); 
+        this.setApellido(p_apellido);
+        this.setNombre(p_nombre);
+        this.setSueldoBasico(p_importe);
+        this.setFechaIngreso(p_fecha);
+        this.setJefe(null);
     }
 
     // Constructor por año de ingreso (Gerente General sin jefe)
     public EmpleadoConJefe(long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio) {
-        this(p_cuil, p_apellido, p_nombre, p_importe, new GregorianCalendar(p_anio, Calendar.JANUARY, 1), null);
-    }
-
-    // Constructor por año con jefe
-    public EmpleadoConJefe(long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio, EmpleadoConJefe p_jefe) {
-        this(p_cuil, p_apellido, p_nombre, p_importe, new GregorianCalendar(p_anio, Calendar.JANUARY, 1), p_jefe);
+        this.setCuil(p_cuil); 
+        this.setApellido(p_apellido);
+        this.setNombre(p_nombre);
+        this.setSueldoBasico(p_importe);
+        this.setAnioIngreso(p_anio);
+        this.setJefe(null);
     }
     
     private void setCuil(long p_cuil) { 
@@ -57,7 +55,13 @@ public class EmpleadoConJefe {
     }
     
     private void setAnioIngreso(int p_anio) { 
-        this.fechaIngreso.set(Calendar.YEAR, p_anio); 
+        Calendar admissionYear = new GregorianCalendar(p_anio, 1, 1);
+        
+        this.fechaIngreso = admissionYear;
+    }
+    
+    private void setFechaIngreso(Calendar p_fecha){
+        this.fechaIngreso = p_fecha;
     }
     
     public void setJefe(EmpleadoConJefe p_jefe) { 
@@ -65,70 +69,138 @@ public class EmpleadoConJefe {
     }
     
     public long getCuil() { 
-        return cuil; 
+        return this.cuil; 
     }
    
     public String getNombre() { 
-        return nombre; 
+        return this.nombre; 
     }
 
     public String getApellido() { 
-        return apellido; 
+        return this.apellido; 
     }
 
     public double getSueldoBasico() { 
-        return sueldoBasico; 
+        return this.sueldoBasico; 
     }
 
     public int getAnioIngreso() { 
-        return fechaIngreso.get(Calendar.YEAR); 
+        return this.fechaIngreso.get(Calendar.YEAR); 
     }
 
     public EmpleadoConJefe getJefe() { 
-        return jefe; 
+        return this.jefe; 
     }
 
-    public int antiguedad() {
-        Calendar hoy = Calendar.getInstance();
-        return hoy.get(Calendar.YEAR) - fechaIngreso.get(Calendar.YEAR);
+    public int antiguedad()
+    {
+        Calendar fechaHoy = new GregorianCalendar();
+        int anioHoy = fechaHoy.get(Calendar.YEAR);
+        
+        return anioHoy - this.getAnioIngreso();
+        
     }
 
-    public double descuento() {
-        return 0; 
+    /**
+     * Método privado, utiliza el método getSueldo para calcular el descuento que se debe aplicar.
+     * Cálculo del descuento = %2 del sueldo basico más $1500.
+     * @return retorna un tipo de dato coma flotante de doble precisión.
+     */
+     private double descuento()
+    {
+        return getSueldoBasico() * 0.2 + 1500;
+        
+    }
+    
+    /**
+     * Método privado, utiliza los métodos antiguedad y getSueldo para calcular el adicional que se debe 
+     * aplicar en base a su antigüedad.
+     * Cálculo del adicional=Si antigüedad es menor a 2 años corresponde 2% respecto al sueldo basico.
+     *                       Si antigüedad es mayor o igual a 2 años pero menor a 10 años corresponde 4% respecto al sueldo basico.
+     *                       Si antigüedad es mayor o igual a 10 años corresponde 6% respecto al sueldo basico.
+     * @return retorna un tipo de dato coma flotante de doble precisión.
+     */
+     private double adicional()
+    {
+        if(antiguedad() < 2){
+            return getSueldoBasico() * 0.2;
+        }
+        
+        if(antiguedad() >= 2 && antiguedad() < 10){
+            return getSueldoBasico() * 0.4;
+        }
+        
+        else{
+            return getSueldoBasico() * 0.6;
+        }     
     }
 
-    public double adicional() {
-        return 0;
+    /**
+     * Método publico, utiliza los métodos getSueldo, adicional y descuento para  calcular 
+     * el sueldo neto, sumando el adicional al sueldo basico menos los descuentos.
+     * @return retorna un tipo de dato coma flotante de doble precisión.
+     */
+     public double sueldoNeto()
+    {
+        return getSueldoBasico() + adicional() - descuento();
     }
 
-    public double sueldoNeto() {
-        return sueldoBasico + adicional() - descuento();
+    /**
+     * Método publico, utiliza los métodos getNombre y getApellido para formar una única cadena de texto 
+     * concatenando los atributos nombre y apellido.
+     * @return retorna un objeto de tipo String.
+     */
+    public String nomYApe(){
+        return getNombre() + " " + getApellido();
     }
-
-    // Formateo de nombres
-    public String nomYape() {
-        return nombre + " " + apellido;
+    
+    /**
+     * Método publico, utiliza los métodos getApellido y getNombre para formar una única cadena de texto 
+     * concatenando los atributos apellido y nombre.
+     * @return retorna un objeto de tipo String.
+     */
+    public String apeYNom(){
+        return getApellido() + " " + getNombre();
     }
-
-    public String apeYnom() {
-        return apellido + ", " + nombre;
+    
+    /**
+     * Método publico, utiliza el método nomYApe para formar una cadena de texto con su respectiva 
+     * descripción junto al estado del objeto. 
+     * Utiliza los métodos getCUIL y antigüedad para formar una cadena de texto con sus respectivas descripciones 
+     * junto a los estados de los objetos. 
+     * Utiliza el método sueldoNeto para formar una cadena de texto con su respectiva descripción junto al 
+     * estado del objeto, se instancia un objeto de tipo DecimalFormat el cual se utiliza para darle formato de dos 
+     * decimales al método sueldoNeto. 
+     * Emplea 3 System.out.println para visualizar por consola las tres cadenas de texto.
+     */
+    public void mostrarPantalla(){
+        System.out.println("Nombre y Apellido: " + nomYApe());
+        System.out.println("CUIL: " + getCuil() + " Antigüedad: " + antiguedad() + " años de servicio");
+        System.out.println("Sueldo neto: $" + sueldoNeto());
+        if(this.getJefe() == null){
+            System.out.println("GERENTE GENERAL");
+        }else{
+            System.out.println("Responde a: " + this.getJefe()); 
+        }
     }
-
-    // Método que devuelve la línea de información
-    public String mostrarLinea() {
-        String jefeStr = (jefe == null) ? "GERENTE GENERAL" : jefe.apeYnom();
-        return "Nombre y Apellido: " + nomYape() + "\n" +
-               "CUIL: " + cuil + " Antigüedad: " + antiguedad() + " años de servicio\n" +
-               "Sueldo Neto: $ " + sueldoNeto() + "\n" +
-               "Responde a: " + jefeStr + "\n";
+    
+    /**
+     * Método publico, utiliza los métodos getCUIL, getApellido y getNombre para formar una única cadena de texto 
+     * concatenando los atributos cuil, apellido, nombre. Además se emplea el método sueldoNeto, se instancia un 
+     * objeto de tipo DecimalFormat el cual se utiliza para darle formato de dos decimales a dicho método.
+     * @return retorna un objeto de tipo String.
+     */
+    public String mostrarLinea(){
+        return getCuil() + "\t" + apeYNom() + "......... $" + sueldoNeto(); 
     }
-
-    public void mostrarPantalla() {
-        System.out.println(mostrarLinea());
-    }
-
-    public void emitirPermisoSalida() {
-        String firma = (jefe == null) ? "Firmado: GERENTE GENERAL" : "Firmado: " + jefe.nomYape();
-        System.out.println("Permiso de salida otorgado a " + nomYape() + "\n" + firma);
+    
+    public boolean esAniversario(){
+        Calendar hoy = new GregorianCalendar();
+        
+        if(this.antiguedad() >= 1){
+            return true;
+        } else{
+            return false;
+        }
     }
 }

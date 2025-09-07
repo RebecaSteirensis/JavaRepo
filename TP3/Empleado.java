@@ -148,7 +148,7 @@ public class Empleado
         Calendar fechaHoy = new GregorianCalendar();
         int anioHoy = fechaHoy.get(Calendar.YEAR);
         
-        return anioHoy - getAnioIngreso();
+        return anioHoy - this.getAnioIngreso();
         
     }
     
