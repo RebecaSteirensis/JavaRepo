@@ -1,15 +1,22 @@
 #BlueJ class context
 comment0.target=Hospital
+comment0.text=\ \n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \n\ Clase\ Hospital\ -\ Trabajo\ Practico\ 3\n
 comment1.params=p_nombreHospital\ p_nombreDirector
 comment1.target=Hospital(java.lang.String,\ java.lang.String)
+comment1.text=\nConstructor\ con\ parametros,\ instancia\ un\ objeto\n@param\ String\ p_nombreHospital\n@param\ String\ p_nombreDirector\n
 comment2.params=p_nombreHospital
 comment2.target=void\ setNombreHospital(java.lang.String)
+comment2.text=\nSetter,\ recibe\ un\ String\ y\ permite\ modificar\ el\ valor\ del\ atributo\ nombreHospital\n@param\ String\ p_nombreHospital\n
 comment3.params=p_nombreDirector
 comment3.target=void\ setNombreDirector(java.lang.String)
+comment3.text=\nSetter,\ recibe\ un\ String\ y\ permite\ modificar\ el\ valor\ del\ atributo\ nombreDirector\n@param\ String\ p_nombreDirector\n
 comment4.params=
 comment4.target=java.lang.String\ getNombreHospital()
+comment4.text=\nGetter,\ permite\ obtener\ el\ valor\ del\ atributo\ nombreHospital\n@return\ devuelve\ un\ String\n
 comment5.params=
 comment5.target=java.lang.String\ getNombreDirector()
+comment5.text=\nGetter,\ permite\ obtener\ el\ valor\ del\ atributo\ nombreDirector\n@return\ devuelve\ un\ String\n
 comment6.params=p_paciente
 comment6.target=void\ consultaDatosFiliatorios(Paciente)
+comment6.text=\n\ Metodo\ Publico,muestra\ por\ pantalla\ los\ datos\ del\ hospital\ y\ del\ paciente\n\ @param\ Paciente\ p_paciente\n
 numComments=7

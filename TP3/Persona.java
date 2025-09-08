@@ -1,7 +1,6 @@
-
 /** 
  * @author Fernandez Alejandro Facundo - Gomez Rebeca 
- * Clase Persona - Trabajo Practico 2
+ * Clase Persona - Trabajo Practico 3
  */
 
 //Imports
@@ -33,6 +32,13 @@ public class Persona
        this.setAnioNacimiento(p_anio);
     }
     
+    /**
+    *Constructor con parametros, instancia un objeto de la clase
+    *@param int p_dni
+    *@param String p_nombre
+    *@param String p_apellido
+    *@param Calendar p_fecha
+    */
     public Persona(int p_dni, String p_nombre, String p_apellido, Calendar p_fecha){
         this.setDNI(p_dni);
         this.setNombre(p_nombre);
@@ -78,6 +84,10 @@ public class Persona
         this.fechaDeNacimiento = fecha;
     }
     
+    /**
+    *Setter,recibe un entero y permite modificar el valor de el atributo fechaNacimiento
+    *@param Calendar p_fecha
+    */
     private void setFechaNacimiento(Calendar p_fecha)
     {
         this.fechaDeNacimiento = p_fecha;
@@ -115,6 +125,10 @@ public class Persona
         return this.fechaDeNacimiento.get(Calendar.YEAR);
     }
     
+    /**
+    *Getter, permite obtener el valor de el atributo fechaNacimiento
+    *@return devuelve una valor calendar
+    */
     public Calendar getFechaNacimiento(){
         return this.fechaDeNacimiento;
     }
@@ -167,6 +181,10 @@ public class Persona
         System.out.println("DNI: " + getDNI() + "\t Edad: " + edad() + " años");
     }
     
+    /**
+     *Comprueba si el dia actual es el cumpleaños de la persona
+     *@return devuelve un booleano
+    */
     public boolean esCumpleanios() {
         Calendar hoy = new GregorianCalendar();
         

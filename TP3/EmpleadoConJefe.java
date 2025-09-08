@@ -1,6 +1,14 @@
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase EmpleadoConJefe - Trabajo Practico 3
+ */
+
 import java.util.*;
 
 public class EmpleadoConJefe {
+    /**
+     * Atributos de la clase
+    */
     private long cuil;
     private String apellido;
     private String nombre;
@@ -8,7 +16,15 @@ public class EmpleadoConJefe {
     private Calendar fechaIngreso;
     private EmpleadoConJefe jefe;
 
-    // Constructor con jefe explícito
+    /**
+    *Constructor con parametros, instancia un objeto de la clase
+    *@param long p_cuil
+    **@param String p_apellido
+    *@param String p_nombre
+    *@param double p_importe
+    *@param Calendar p_fecha
+    *@param EmpleadoConJefe p_jefe;
+    */
     public EmpleadoConJefe(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha, EmpleadoConJefe p_jefe) {
         this.setCuil(p_cuil); 
         this.setApellido(p_apellido);
@@ -18,7 +34,14 @@ public class EmpleadoConJefe {
         this.setJefe(p_jefe);
     }
 
-    // Constructor sin jefe (Gerente General)
+    /**
+    *Constructor con parametros, instancia un objeto de la clase
+    *@param long p_cuil
+    *@param String  p_apellido
+    *@param String p_nombre
+    *@param double p_importe
+    *@param Calendar p_fecha
+    */
     public EmpleadoConJefe(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha) {
         this.setCuil(p_cuil); 
         this.setApellido(p_apellido);
@@ -28,7 +51,14 @@ public class EmpleadoConJefe {
         this.setJefe(null);
     }
 
-    // Constructor por año de ingreso (Gerente General sin jefe)
+    /**
+    *Constructor con parametros, instancia un objeto de la clase
+    *@param long p_cuil
+    *@param String  p_apellido
+    *@param String p_nombre
+    *@param double p_importe
+    *@param int p_anio
+    */
     public EmpleadoConJefe(long p_cuil, String p_apellido, String p_nombre, double p_importe, int p_anio) {
         this.setCuil(p_cuil); 
         this.setApellido(p_apellido);
@@ -38,60 +68,124 @@ public class EmpleadoConJefe {
         this.setJefe(null);
     }
     
+    /**
+    *Setter,recibe un long por parametro y permite modificar el valor de el atributo cuil
+    *@param double p_cuil
+    */
     private void setCuil(long p_cuil) { 
         this.cuil = p_cuil; 
     }
 
+    /**
+    *Setter,recibe un String por parametro y permite modificar el valor de el atributo nombre
+    *@param String p_nombre
+    */
     private void setNombre(String p_nombre) { 
         this.nombre = p_nombre; 
     }
-     
+    
+    /**
+    *Setter,recibe un String por parametro y permite modificar el valor de el atributo apellido
+    *@param String p_apellido
+    */
     private void setApellido(String p_apellido) { 
         this.apellido = p_apellido; 
     }
     
+    /**
+    *Setter,recibe un double por parametro y permite modificar el valor de el atributo sueldoBasico
+    *@param double p_importe
+    */
     private void setSueldoBasico(double p_importe) { 
         this.sueldoBasico = p_importe; 
     }
     
+    /**
+    *Setter,recibe un int por parametro y permite modificar el valor de el atributo fechaIngreso
+    *@param int p_anio
+    */
     private void setAnioIngreso(int p_anio) { 
         Calendar admissionYear = new GregorianCalendar(p_anio, 1, 1);
         
         this.fechaIngreso = admissionYear;
     }
-    
+
+    /**
+    *Setter,recibe un Calendar por parametro y permite modificar el valor de el atributo p_fecha
+    *@param Calendar p_importe
+    */
     private void setFechaIngreso(Calendar p_fecha){
         this.fechaIngreso = p_fecha;
     }
     
+    /**
+    *Setter,recibe un EmpleadoConJefe por parametro y permite modificar el valor de el atributo p_jefe
+    *@param EmpleadoConJefe p_importe
+    */
     public void setJefe(EmpleadoConJefe p_jefe) { 
         this.jefe = p_jefe; 
     }
     
+    /**
+    *Getter, permite obtener el valor de el atributo cuil
+    *@return devuelve un long
+    */
     public long getCuil() { 
         return this.cuil; 
     }
    
+    /**
+    *Getter, permite obtener el valor de el atributo nombre
+    *@return devuelve un String
+    */
     public String getNombre() { 
         return this.nombre; 
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo apellido
+    *@return devuelve un String
+    */
     public String getApellido() { 
         return this.apellido; 
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo sueldoBasico
+    *@return devuelve un double
+    */
     public double getSueldoBasico() { 
         return this.sueldoBasico; 
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo fechaIngreso
+    *@return devuelve un int
+    */
     public int getAnioIngreso() { 
         return this.fechaIngreso.get(Calendar.YEAR); 
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo jefe
+    *@return devuelve un EmpleadoConJefe
+    */
     public EmpleadoConJefe getJefe() { 
         return this.jefe; 
     }
+    
+    /**
+    *Getter, permite obtener el valor de el atributo fechaIngreso
+    *@return devuelve un Calendar
+    */
+    public Calendar getFechaIngreso(){
+        return this.fechaIngreso;
+    }
 
+    /**
+    *Metodo publico, calcula la antiguedad del empleado
+    *@return devuelve un int
+    */
     public int antiguedad()
     {
         Calendar fechaHoy = new GregorianCalendar();
@@ -164,15 +258,8 @@ public class EmpleadoConJefe {
     }
     
     /**
-     * Método publico, utiliza el método nomYApe para formar una cadena de texto con su respectiva 
-     * descripción junto al estado del objeto. 
-     * Utiliza los métodos getCUIL y antigüedad para formar una cadena de texto con sus respectivas descripciones 
-     * junto a los estados de los objetos. 
-     * Utiliza el método sueldoNeto para formar una cadena de texto con su respectiva descripción junto al 
-     * estado del objeto, se instancia un objeto de tipo DecimalFormat el cual se utiliza para darle formato de dos 
-     * decimales al método sueldoNeto. 
-     * Emplea 3 System.out.println para visualizar por consola las tres cadenas de texto.
-     */
+    *Metodo publico, muestra por pantalla los datos del empleado y el apellido y nombre del jefe si es que responde a alguno
+    */
     public void mostrarPantalla(){
         System.out.println("Nombre y Apellido: " + nomYApe());
         System.out.println("CUIL: " + getCuil() + " Antigüedad: " + antiguedad() + " años de servicio");
@@ -194,6 +281,10 @@ public class EmpleadoConJefe {
         return getCuil() + "\t" + apeYNom() + "......... $" + sueldoNeto(); 
     }
     
+    /**
+     * Calcula si el dia actual es el aniversario de ingreso del empleado
+     * @return devuelve un booleano
+    */
     public boolean esAniversario(){
         Calendar hoy = new GregorianCalendar();
         

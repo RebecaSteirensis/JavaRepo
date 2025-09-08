@@ -1,7 +1,6 @@
-
 /** 
  * @author Fernandez Alejandro Facundo - Gomez Rebeca 
- * Clase Punto - Trabajo Practico 2
+ * Clase Punto - Trabajo Practico 3
  */
 public class Punto
 {
@@ -14,7 +13,6 @@ public class Punto
     /**
      * Constructor, instancia un objeto origen de la clase Punto cuyos estados de los 
      * atributos x e y valen 0.
-     * 
      */
     public Punto(){
         setX(0);
@@ -67,15 +65,21 @@ public class Punto
     }
     
     /**
-     * Método publico, utiliza los métodos setX, setY, getX y getY, recibe por parametro 
-     * datos de tipo coma flotante de doble precisión correspondientes a x e y.
-     * Modifica los estados de los atributos mencionados mediante los setters, sumando los parametros con los estados actuales.
-     */
+    *Metodo publico, recibe 2 parametros de tipo double
+    *utiliza los metodos getX() y getY() para realizar la suma con los parametros recibidos
+    *y asigna los resultados con los metodos set para actualizar los valores de los atributos x e y
+    *@param p_dx
+    **@param p_dy
+    */
     public void desplazar(double p_dx, double p_dy){
         setX(getX() + p_dx);
         setY(getY() + p_dy);
     }
     
+    /**
+    * Metodo publico,recibe un punto por parametro y calcula la distancia con el punto que ejecuto la accion
+    * @param Punto p_ptoDistante
+    */
     public double distanciaA(Punto p_ptoDistante){
         return Math.sqrt(Math.pow((p_ptoDistante.getX() - this.getX()), 2) + (Math.pow((p_ptoDistante.getY() - this.getY()), 2)));
     }

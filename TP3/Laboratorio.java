@@ -150,6 +150,6 @@ public class Laboratorio
      * @return retorna un objeto de tipo String.
      */
     public String mostrar(){
-        return "Laboratorio: " + getNombre() + "\nDomicilio: " + getDomicilio() + " - Telefono: " + getTelefono();
+        return "Laboratorio: " + this.getNombre() + "\nDomicilio: " + this.getDomicilio() + " - Telefono: " + this.getTelefono();
     }
 }

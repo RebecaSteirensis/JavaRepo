@@ -1,6 +1,6 @@
 /** 
  * @author Fernandez Alejandro Facundo - Gomez Rebeca 
- * Clase Empleado - Trabajo Practico 2
+ * Clase Empleado - Trabajo Practico 3
  */
 
 //Imports
@@ -35,6 +35,14 @@ public class Empleado
         this.setAnioIngreso(p_anio);
     }
     
+    /**
+    *Constructor con parametros, instancia un objeto de la clase
+    *@param double p_cuil
+    *@param String p_apellido
+    *@param String p_nombre
+    *@param double p_importe
+    *@param Calendar p_fecha
+    */
     public Empleado(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha)
     {
         this.setCuil(p_cuil);
@@ -88,6 +96,10 @@ public class Empleado
         this.fechaIngreso = anioDeIngreso;
     }
     
+    /**
+    *Setter,recibe un Calendar por parametro y permite modificar el valor de el atributo sueldoBasico
+    *@param Calendar p_fecha
+    */
     private void setFechaIngreso(Calendar p_fecha){
         this.fechaIngreso = p_fecha;
     }
@@ -132,6 +144,10 @@ public class Empleado
         return this.fechaIngreso.get(Calendar.YEAR);
     }
     
+    /**
+    *Getter, permite obtener el valor de el atributo fechaIngreso
+    *@return devuelve un Calendar
+    */
     public Calendar getFechaIngreso(){
         return this.fechaIngreso;
     }
@@ -240,13 +256,13 @@ public class Empleado
         return getCuil() + "\t" + apeYNom() + "......... $" + sueldoNeto(); 
     }
     
+    /**
+     * Calcula si el dia actual es el aniversario de ingreso del empleado
+     * @return devuelve un booleano
+    */
     public boolean esAniversario(){
         Calendar hoy = new GregorianCalendar();
         
-        if(this.antiguedad() >= 1){
-            return true;
-        } else{
-            return false;
-        }
+        return (hoy.get(Calendar.DATE) == this.getFechaIngreso().get(Calendar.DATE) && hoy.get(Calendar.MONTH)+1 == this.getFechaIngreso().get(Calendar.MONTH)+1);
     }
 }
