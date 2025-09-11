@@ -277,6 +277,7 @@ public class EmpleadoConJefe {
      * objeto de tipo DecimalFormat el cual se utiliza para darle formato de dos decimales a dicho método.
      * @return retorna un objeto de tipo String.
      */
+    
     public String mostrarLinea(){
         return getCuil() + "\t" + apeYNom() + "......... $" + sueldoNeto(); 
     }
