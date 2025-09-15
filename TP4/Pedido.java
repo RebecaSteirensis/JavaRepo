@@ -9,13 +9,13 @@ public class Pedido
     public Pedido(Calendar p_fecha, Cliente p_cliente, ArrayList<Producto> p_productos){
         this.setFecha(p_fecha);
         this.setCliente(p_cliente);
-        this.setProductos(p_productos);
+        this.setProductos(new ArrayList(p_productos));
     }
     
     public Pedido(Calendar p_fecha, Cliente p_cliente, Producto p_producto){
         this.setFecha(p_fecha);
         this.setCliente(p_cliente);
-        this.setProductos(p_producto);
+        this.setProductos(new ArrayList());
     }
 
     private void setFecha(Calendar p_fecha){

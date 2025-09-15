@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Pedido
+comment1.params=p_fecha\ p_cliente\ p_productos
+comment1.target=Pedido(java.util.Calendar,\ Cliente,\ java.util.ArrayList)
+comment2.params=p_fecha\ p_cliente\ p_producto
+comment2.target=Pedido(java.util.Calendar,\ Cliente,\ Producto)
+comment3.params=p_fecha
+comment3.target=void\ setFecha(java.util.Calendar)
+comment4.params=p_productos
+comment4.target=void\ setProductos(java.util.ArrayList)
+comment5.params=p_cliente
+comment5.target=void\ setCliente(Cliente)
+comment6.params=
+comment6.target=java.util.Calendar\ getFecha()
+comment7.params=
+comment7.target=java.util.ArrayList\ getProductos()
+comment8.params=
+comment8.target=Cliente\ getCliente()
+numComments=9
