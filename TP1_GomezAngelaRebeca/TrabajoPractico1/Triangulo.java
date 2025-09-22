@@ -7,6 +7,9 @@
     area= raíz cuadrada(semiperimetro*(semiperimetro-a)*(semiperimetro-b)*(semiperimetro-c))
 */
 
+//Imports
+import java.util.Scanner;
+
 //Class definition
 public class Triangulo
 {
