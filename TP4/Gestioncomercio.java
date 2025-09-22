@@ -1,10 +1,3 @@
-
-/**
- * Write a description of class GestionComercio here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Gestioncomercio {
     public static void main(String[] args) {
         Empleado empleado1 = new Empleado(30100623, "Gonzalez", "Juan", 1600, 1990);

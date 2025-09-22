@@ -1,13 +1,13 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-/**
- * Permite administrar los empleados de un comercio.
- * 
- * @author
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Comercio - Trabajo Practico 4
  */
-
 public class Comercio {
+    /**
+     * Atributos de la clase
+    */
     private String nombre;
     private HashMap<Long, Empleado> empleados;
     
@@ -35,48 +35,93 @@ public class Comercio {
         this.setEmpleados(p_empleados);
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo nombre
+    *@return devuelve un String
+    */
     public String getNombre() {
         return this.nombre;
     }
 
+    /**
+    *Setter,recibe un String por parametro y permite modificar el valor de el atributo nombre
+    *@param String p_nombre
+    */
     private void setNombre(String p_nombre) {
         this.nombre = p_nombre;
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo empleados
+    *@return devuelve un HashMap
+    */
     public HashMap<Long, Empleado> getEmpleados(){
         return this.empleados;
     }
 
+    /**
+    *Setter,recibe un hashMap por parametro y permite modificar el valor de el atributo empleados
+    *@param HashMap p_empleados
+    */
     private void setEmpleados(HashMap<Long, Empleado> p_empleados){
         this.empleados = p_empleados;
     }
-    /**Metodo que permite el alta de un empleado*/
+    
+    /**
+     * Metodo publico, agrega un empleado a la lista de empleados
+     * @param Empleado p_empleado
+    */
     //recordamos que trabaja con clave,valor
     public void altaEmpleado(Empleado p_empleado){
         this.getEmpleados().put(p_empleado.getCuil(), p_empleado);
     }
-    /**Metodo que permite quitar un empleado a traves del cuil*/
+    
+    /**
+     * Metodo publico, quita un empleado de lista de empleados
+     * @param long cuil
+     * @return devuelve un Empleado
+    */  
     public Empleado bajaEmpleado(long p_cuil){
         return this.getEmpleados().remove(p_cuil);
     }
-     /**Metodo que permite saber la cantidad de empleados que hay en la coleccion*/
+    
+    /**
+     * Metodo publico, calcula la cantidad de empleados
+     * @return devuelve un entero
+    */
     public int cantidadEmpleado(){
         return this.getEmpleados().size();
     }
-    /**Metodo retorna true si la clave se encuentra en la coleccion*/
+    
+    /**
+     * Metodo publico, averigua si la persona es empleado
+     * @param long p_cuil
+     * @return devuelve un boolean
+    */
     public boolean esEmpleado(long p_cuil){
         return this.getEmpleados().containsKey(p_cuil);
     }
-    /**Metodo permite buscar al empleado por si numero de cuil*/
+    
+    /**
+     * Metodo publico, busca un empleado
+     * @param long p_cuil
+     * @return devuelve un Empleado
+    */
     public Empleado buscarEmpleado(long p_cuil){
         return this.getEmpleados().get(p_cuil);
     }
-    /**Metodo que imprime el sueldo Neto de un empleado*/
+    
+    /**
+     * Metodo publico, muestra el sueldo neto de el empleado
+     * @param long p_cuil
+    */
     public void sueldoNeto(long p_cuil){
         System.out.println(this.getEmpleados().get(p_cuil).sueldoNeto());
     }
  
-    /**Metodo nomina recorre el HashMap e imprime el cuil, nombre y sueldo*/
+    /**
+     * Metodo publico, muestra la nomina de empleados
+    */
     public void nomina(){
         System.out.println("**** Nomina de empleados de " + this.getNombre() + " ****");
         for (Map.Entry<Long, Empleado> entry : this.getEmpleados().entrySet()){

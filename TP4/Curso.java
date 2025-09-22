@@ -1,14 +1,14 @@
+import java.util.*;
 
-/**
- * Permite manejar un registro de un curso.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Curso - Trabajo Practico 4
  */
-import java.util.HashMap;
-import java.util.Map;
 public class Curso
 {
+    /**
+     * Atributos de la clase
+    */
    private String nombre;
    private HashMap <Integer, Alumno> alumnos;
    
@@ -35,53 +35,102 @@ public class Curso
    }
    
    //accessors
+   /**
+    *Setter,recibe un String por parametro y permite modificar el valor de el atributo nombre
+    *@param String p_nombre
+    */
    private void setNombre(String p_nombre){
        this.nombre = p_nombre;
    }
    
+   /**
+    *Setter,recibe un HashMap por parametro y permite modificar el valor de el atributo alumnos
+    *@param Hashmap<Integer,Alumno> p_alumnos
+    */
    private void setAlumnos(HashMap p_alumnos){
        this.alumnos = p_alumnos;
    }
    
+   /**
+    *Getter, permite obtener el valor de el atributo nombre
+    *@return devuelve un String
+    */
    public String getNombre(){
        return this.nombre;
    }
    
+   /**
+    *Getter, permite obtener el valor de el atributo alumnos
+    *@return devuelve un HashMap
+    */
    public HashMap<Integer, Alumno> getAlumnos(){
        return this.alumnos;
    }
    
    
    //metodos
-   /**Metodo que permite inscribir un Alumno al curso*/
+   /**
+     * Metodo publico, agrega un alumno a la lista de alumnos
+     * @param Alumno p_alumno
+    */
     public void inscribirAlumno(Alumno p_alumno){
         this.getAlumnos().put(p_alumno.getLu(), p_alumno);
     }
-    /**Metodo que permite quitar un Alumno  del curso*/
+    
+   /**
+     * Metodo publico, quita un alumno de la lista de alumnos
+     * @param int p_lu
+     * @return devuelve un Alumno
+    */
     public Alumno quitarAlumno(int p_lu){
         return this.getAlumnos().remove(p_lu);
     }
-    /**Metodo que permite saber la cantidad de alumnos de la coleccion*/
+    
+   /**
+     * Metodo publico, devuelve la cantidad de alumnos
+     * @return devuelve un entero
+    */
     public int cantidadDeAlumnos(){
         return this.getAlumnos().size();
     }
-    /**Metodo retorna true si el numero de libreta del Alumno se encuentra en la coleccion*/
+    
+   /**
+     * Metodo publico, averigua si un alumno esta inscripto
+     * @param int p_lu
+     * @return devuelve un boolean
+    */
     public boolean estaInscripto(int p_lu){
         return this.getAlumnos().containsKey(p_lu);
     }
-    /**Metodo retorna true si el nombre de libreta del Alumno se encuentra en la coleccion*/
-    public boolean estaInscripto(Alumno p_alumno){
+    
+   /**
+     * Metodo publico, averigua si un alumno esta inscripto
+     * @param Alumno p_alumno
+     * @return devuelve un boolean
+    */    public boolean estaInscripto(Alumno p_alumno){
         return  this.getAlumnos().containsValue(p_alumno);
     }
-    /**Metodo busca si el numero de libreta del Alumno está en la coleccion*/
+    
+   /**
+     * Metodo publico, busca un alumno
+     * @param int p_lu
+     * @return devuelve un Alumno
+    */
     public Alumno buscarAlumno(int p_lu){
         return this.getAlumnos().get(p_lu);
     }
-    /**Metodo que imprime el promedio del alumno*/
+    
+   /**
+     * Metodo publico, imprime el promedio del alumno
+     * @param int p_lu
+    */
     public void imprimirPromedioDelAlumno(int p_lu){
         System.out.println("Promedio: " + this.getAlumnos().get(p_lu).promedio());
     }
-    /**Metodo imprime numero de libreta y nombre de alumnos*/
+    
+   /**
+     * Muestra por pantalla los datos de los alumnos inscriptos
+    */
     public void mostrarInscriptos(){
         System.out.println("****-- Cantidad de inscriptos: " + this.cantidadDeAlumnos());
         for (Map.Entry<Integer, Alumno> entryAlumnos: this.getAlumnos().entrySet()){

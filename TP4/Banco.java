@@ -1,14 +1,13 @@
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.*;
 
-/**
- *Permite liquidar los sueldos de los empleados de un Banco.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Banco - Trabajo Practico 4
  */
-
 public class Banco {
+    /**
+    *Atributos de la Clase 
+    */
     private String nombre;
     private int nroSucursal;
     private Localidad localidad;
@@ -70,40 +69,86 @@ public class Banco {
 
     
     //accessors
+    /**
+    *Getter, permite obtener el valor de el atributo empleados
+    *@return devuelve un ArrayList<Empleado>
+    */
     public ArrayList<Empleado> getEmpleados() {
         return this.empleados;
     }
 
+    /**
+    *Setter,recibe un ArrayList<Empleado> y permite modificar el valor de el atributo empleados
+    *@param ArrayList<Empleado> p_empleados
+    */
     private void setEmpleados(ArrayList<Empleado> p_empleados) {
         this.empleados = p_empleados;
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo localidad
+    *@return devuelve una Localidad
+    */
     public Localidad getLocalidad() {
         return this.localidad;
     }
 
+    /**
+    *Setter,recibe un Localidad y permite modificar el valor de el atributo localidad
+    *@param Localidad p_localidad
+    */
     private void setLocalidad(Localidad p_localidad) {
         this.localidad = p_localidad;
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo nombre
+    *@return devuelve un String
+    */
     public String getNombre() {
         return this.nombre;
     }
 
+    /**
+    *Setter,recibe un String y permite modificar el valor de el atributo nombre
+    *@param String p_nombre
+    */
     private void setNombre(String p_nombre) {
         this.nombre = p_nombre;
     }
 
+    /**
+    *Getter, permite obtener el valor de el atributo nroSucursal
+    *@return devuelve un int
+    */
     public int getNroSucursal() {
         return this.nroSucursal;
     }
 
+    /**
+    *Setter,recibe un int y permite modificar el valor de el atributo nroSucursal
+    *@param Localidad p_nroSucursal
+    */
     private void setNroSucursal(int p_nroSucursal) {
         this.nroSucursal = p_nroSucursal;
     }
-    
-    // Fin de Acessors
 
+    /**
+    *Getter, permite obtener el valor de el atributo cuentasBancarias
+    *@return devuelve un ArrayList<CuentaBancaria>
+    */
+    public ArrayList<CuentaBancaria> getCuentasBancarias() {
+        return this.cuentasBancarias;
+    }
+
+    /**
+    *Setter,recibe un ArrayList<CuentaBancaria> y permite modificar el valor de el atributo cuentasBancarias
+    *@param ArrayList<CuentaBancaria> p_cuentas
+    */
+    private void setCuentasBancarias(ArrayList<CuentaBancaria> p_cuentasBancarias) {
+        this.cuentasBancarias = p_cuentasBancarias;
+    }
+    
     /**
      * Agrega empleado recibido por parametro.
      * 
@@ -131,14 +176,6 @@ public class Banco {
         }
     }
 
-    public ArrayList<CuentaBancaria> getCuentasBancarias() {
-        return this.cuentasBancarias;
-    }
-
-    private void setCuentasBancarias(ArrayList<CuentaBancaria> p_cuentasBancarias) {
-        this.cuentasBancarias = p_cuentasBancarias;
-    }
-    
     /**
      * Agrega la cuenta recibida por parametro.
      * 
@@ -160,14 +197,18 @@ public class Banco {
         return this.getCuentasBancarias().remove(p_cuentaBancaria);
     }
 
-    /**Metodo recorre el Array*/
+    /**
+     * Metodo publico, lista los datos del empleado y el total a pagar
+    */
     public void listarSueldos(){
         for (Empleado unEmpleado : this.getEmpleados()) { //for(int i = 0; i<this.getEmpleados().size().i++)
             System.out.println(unEmpleado.mostrarLinea()); //System.out.println(this.getEmpleados.get(i).mostrarlinea());
         }
     }
     
-    /**Metodo que calcula los sueldos de los empreados*/
+    /**
+     * Metodo publico, calcula la suma de sueldos de los empleados
+    */
     public double sueldosAPagar(){
         double acumulador = 0.0;
 
@@ -177,7 +218,9 @@ public class Banco {
         return acumulador;
     }
     
-    /**Metodo mostrar*/
+    /**
+     * Muestra los datos de el banco
+    */
     public void mostrar(){
         System.out.println("Banco: " + this.getNombre() + "\tSucursal: " + this.getNroSucursal());
         System.out.println("Localidad: " + this.getLocalidad().getNombre() + "\tProvincia: " + this.getLocalidad().getProvincia());
@@ -185,8 +228,9 @@ public class Banco {
         System.out.println("Total a Pagar: ............................................. $" + this.sueldosAPagar());
     }
 
-    /**Muestra por pantalla las cuentas cuyos saldos esten en 0.
-     */
+    /**
+     * Metodo publico, Muestra los datos de las cuentas con saldo en 0
+    */
     public void listarCuentasConSaldoCero(){
             System.out.println("Cuentas Sin Saldo:");
             System.out.println("--- Cuenta -------------------- Apellido y Nombre ---------------");
@@ -199,8 +243,9 @@ public class Banco {
         }
     
      /**
-     * Permite conocer cuantas cuentas tienen un saldo mayor a 0, estan activas.
-     */
+     * Metodo privado, devuelve la cantidad de cuentas con saldo positivo
+     * @return devuelve un int
+    */
     public int cuentasSaldoActivo(){
         int cuentasActivas = 0;
 
@@ -211,7 +256,10 @@ public class Banco {
         }
         return cuentasActivas;
     }
-     /**Metodo que permite agregar nombres de titulares sin duplicados, sin un orden*/
+    
+    /**
+    * Metodo que permite agregar nombres de titulares sin duplicados, sin un orden
+    */
     public HashSet<Persona> listaDeTitulares(){
         HashSet<Persona> titulares = new HashSet();
         for (CuentaBancaria unaCuenta : this.getCuentasBancarias()) {
@@ -221,8 +269,8 @@ public class Banco {
     }
     
      /**
-     * Muestra los datos del banco y un resumen de las cuentas bancarias.
-     */
+     * Metodo publico, Muestra el total de cuentas del banco
+    */
     public void mostrarResumen(){
         int cuentasSaldoCero = 0;
         System.out.println("Banco: " + this.getNombre() + "\t\t\tSucursal: " + this.getNroSucursal());
