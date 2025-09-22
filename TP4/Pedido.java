@@ -91,8 +91,11 @@ public class Pedido
     public double totalAlContado(){
         double total = 0;
         
-        for(Producto producto: this.getProductos()){
-            total += producto.precioContado();
+        for (Object objeto : this.getProductos()) {
+            if (objeto instanceof Producto) {
+                Producto producto = (Producto) objeto; 
+                total += Double.valueOf(producto.precioContado());
+            }
         }
         
         return total;
