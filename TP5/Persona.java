@@ -1,33 +1,152 @@
 
-/**
- * Write a description of class Persona here.
- *
- * @author (your name)
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Persona - Trabajo Practico 5
  */
+
+//Imports
+import java.util.*;
+
 public class Persona
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    /**
+     * Atributos de la Clase Persona (variables de instancia).
+     */
+    //Attributes
+    private int nroDni;
+    private String nombre;
+    private String apellido;
+    private int anioNacimiento;
 
     /**
-     * Constructor for objects of class Persona
+     * Constructor con parametros, instancia un objeto de la clase.
+     * @param p_dni
+     * @param p_nombre
+     * @param p_apellido
+     * @param p_anio
      */
-    public Persona()
+    public Persona(int p_dni, String p_nombre, String p_apellido, int p_anio)
     {
-        // initialise instance variables
-        x = 0;
+       this.setDNI(p_dni);
+       this.setNombre(p_nombre);
+       this.setApellido(p_apellido);
+       this.setAnioNacimiento(p_anio);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+    //Setters and Getters
+     /**
+     * Mutador Setter, recibe un tipo de dato entero y permite modificar el estado del atributo nroDni. 
+     * @param p_dni
      */
-    public int sampleMethod(int y)
+    private void setDNI(int p_dni)
     {
-        // put your code here
-        return x + y;
+      this.nroDni = p_dni;
+    }
+    
+    /** 
+     * Mutador Setter, recibe un objeto de tipo String y permite modificar el estado del atributo nombre.
+     * @param p_nombre
+     */
+    private void setNombre(String p_nombre)
+    {
+      this.nombre = p_nombre;
+    }
+    
+    /**
+     * Mutador Setter, recibe un objeto de tipo String y permite modificar el estado del atributo apellido.
+     * @param p_apellido
+     */
+    private void setApellido(String p_apellido)
+    {
+      this.apellido = p_apellido;
+    }
+    
+    /**
+     * Mutador Setter, recibe un tipo de dato entero y permite modificar el estado del atributo anioNacimiento.
+     * @param p_anio
+     */
+    private void setAnioNacimiento(int p_anio)
+    {
+      this.anioNacimiento = p_anio;
+    }
+    
+    /**
+     * Accesor Getter, permite obtener el estado del atributo nroDni.
+     * @return retorna un tipo de dato entero. 
+     */
+    public int getDNI(){
+        return this.nroDni;
+    }
+    
+    /**
+     * Accesor Getter, permite obtener el estado del atributo nombre.
+     * @return retorna un objeto de tipo String.
+     */
+    public String getNombre(){
+        return this.nombre;
+    }
+    
+    /** 
+     * Accesor Getter, permite obtener el estado del atributo apellido.
+     * @return retorna un objeto de tipo String.
+     */
+    public String getApellido(){
+        return this.apellido;
+    }
+    
+    /** 
+     * Accesor Getter, permite obtener el estado del atributo anioNacimiento.
+     * @return retorna un tipo de dato entero.
+     */
+    public int getAnioNacimiento(){
+        return this.anioNacimiento;
+    }
+    
+    //Methods
+    /**
+     * Método publico, instancia un objeto de tipo Calendar el cual se utiliza para asignar a la variable, 
+     * local al método (temporal), anioHoy el año actual, luego se utiliza el método getAnioNacimiento para calcular 
+     * la edad de la persona mediante una resta entre el año actual y el año de nacimiento.
+     * @return retorna un tipo de dato entero.
+     */
+    public int edad(){
+        Calendar fechaHoy = new GregorianCalendar();
+        int anioHoy = fechaHoy.get(Calendar.YEAR);
+        
+        return anioHoy - getAnioNacimiento();
+    }
+    
+    /**
+     * Método publico, utiliza los métodos getNombre y getApellido para formar una única cadena de texto 
+     * concatenando nombre y apellido.
+     * @return retorna un objeto de tipo String.
+     */
+    public String nomYApe(){
+        return getNombre() + " " + getApellido();
+    }
+    
+     /**
+     * Método publico, utiliza los métodos getApellido y getNombre para formar una única cadena de texto 
+     * concatenando los atributos apellido y nombre.
+     * @return retorna un objeto de tipo String.
+     */
+    public String ApeYNom(){
+        return getApellido() + " " + getNombre();
+    }
+    
+    /**
+     * Método publico, utiliza el método nomYApe para formar una cadena de texto con la descripción Nombre
+     * y Apellido junto al estado del objeto.
+     * Utiliza el método getDNI para formar una cadena de texto con la descripción DNI junto al estado del 
+     * objeto.
+     * Utiliza el método edad para formar una cadena de texto con la descripción Edad junto al estado del 
+     * objeto.
+     * Utiliza 1 System.out.println para visualizar por consola la primer cadena de texto.
+     * Utiliza 1 System.out.print para visualizar por consola la segunda cadena de texto.
+     * Utiliza 1 System.out.printl para visualizar por consola la tercer cadena de texto.
+     */
+    public void mostrar(){
+        System.out.println("Nombre y Apellido: " + getNombre() + " " + getApellido());
+        System.out.println("DNI: " + getDNI() + "\t Edad: " + edad() + " años");
     }
 }
