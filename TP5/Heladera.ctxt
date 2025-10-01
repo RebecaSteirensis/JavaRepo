@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Heladera
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Heladera\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=p_marca\ p_precio\ p_stock\ p_pies\ p_puertas\ p_compresor
+comment1.target=Heladera(java.lang.String,\ float,\ int,\ int,\ int,\ boolean)
+comment1.text=\r\n\ Constructor\ para\ inicializar\ una\ instancia\ de\ Heladera.\r\n\r\n\ @param\ p_marca\ \ \ \ \ marca\ de\ la\ heladera\r\n\ @param\ p_precio\ \ \ \ precio\ de\ la\ heladera\r\n\ @param\ p_stock\ \ \ \ \ cantidad\ en\ stock\r\n\ @param\ p_pies\ \ \ \ \ \ tama\u00F1o\ de\ la\ heladera\ en\ pies\r\n\ @param\ p_puertas\ \ \ n\u00FAmero\ de\ puertas\r\n\ @param\ p_compresor\ indica\ si\ la\ heladera\ tiene\ compresor\r\n
+comment2.params=
+comment2.target=int\ getPies()
+comment3.params=p_pies
+comment3.target=void\ setPies(int)
+comment4.params=
+comment4.target=int\ getPuertas()
+comment5.params=p_puertas
+comment5.target=void\ setPuertas(int)
+comment6.params=
+comment6.target=boolean\ getCompresor()
+comment7.params=p_compresor
+comment7.target=void\ setCompresor(boolean)
+comment8.params=
+comment8.target=void\ imprimir()
+comment8.text=\r\n\ Imprime\ los\ detalles\ de\ la\ heladera,\ incluyendo\ atributos\ espec\u00EDficos\ como\ pies,\ puertas\ y\ compresor.\r\n
+comment9.params=p_cuotas\ p_interes
+comment9.target=float\ creditoConAdicional(int,\ float)
+comment9.text=\r\n\ Calcula\ la\ cuota\ de\ cr\u00E9dito\ con\ un\ adicional\ si\ la\ heladera\ tiene\ compresor.\r\n\ Si\ tiene\ compresor,\ se\ a\u00F1ade\ un\ seguro\ de\ $50\ por\ cuota\ al\ valor\ de\ la\ cuota\ base.\r\n\r\n\ @param\ p_cuotas\ \ \ n\u00FAmero\ de\ cuotas\r\n\ @param\ p_interes\ \ porcentaje\ de\ inter\u00E9s\ aplicado\r\n\ @return\ el\ costo\ de\ cada\ cuota,\ con\ el\ adicional\ si\ corresponde\r\n
+numComments=10

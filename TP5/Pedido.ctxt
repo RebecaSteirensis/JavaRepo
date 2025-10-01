@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Pedido
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pedido\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=p_renglon
+comment1.target=Pedido(Renglon)
+comment1.text=\r\n\ Constructor\ que\ inicializa\ un\ pedido\ con\ un\ solo\ rengl\u00F3n.\r\n\r\n\ @param\ p_renglon\ Rengl\u00F3n\ a\ agregar\ al\ pedido.\r\n
+comment2.params=p_renglones
+comment2.target=Pedido(java.util.ArrayList)
+comment2.text=\r\n\ Constructor\ que\ inicializa\ un\ pedido\ con\ una\ lista\ de\ renglones.\r\n\r\n\ @param\ p_renglones\ Lista\ de\ renglones\ a\ agregar\ al\ pedido.\r\n
+comment3.params=
+comment3.target=java.util.ArrayList\ getRenglones()
+comment3.text=\r\n\ Obtiene\ la\ lista\ de\ renglones\ del\ pedido.\r\n\r\n\ @return\ Lista\ de\ renglones.\r\n
+comment4.params=p_renglones
+comment4.target=void\ setRenglones(java.util.ArrayList)
+comment4.text=\r\n\ Establece\ la\ lista\ de\ renglones\ del\ pedido.\r\n\r\n\ @param\ p_renglones\ Lista\ de\ renglones.\r\n
+comment5.params=p_renglon
+comment5.target=void\ agregarRenglon(Renglon)
+comment5.text=\r\n\ Agrega\ un\ nuevo\ rengl\u00F3n\ al\ pedido.\r\n\r\n\ @param\ p_renglon\ Rengl\u00F3n\ a\ agregar.\r\n
+comment6.params=p_renglon
+comment6.target=boolean\ quitarRenglon(Renglon)
+comment6.text=\r\n\ Quita\ un\ rengl\u00F3n\ del\ pedido.\r\n\r\n\ @param\ p_renglon\ Rengl\u00F3n\ a\ quitar.\r\n\ @return\ true\ si\ el\ rengl\u00F3n\ fue\ eliminado,\ false\ de\ lo\ contrario.\r\n
+comment7.params=
+comment7.target=void\ mostrar()
+comment7.text=\r\n\ Muestra\ la\ informaci\u00F3n\ del\ pedido,\ incluyendo\ cada\ rengl\u00F3n,\r\n\ su\ precio\ y\ el\ total\ del\ pedido.\r\n
+numComments=8

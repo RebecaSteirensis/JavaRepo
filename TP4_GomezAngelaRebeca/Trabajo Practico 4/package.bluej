@@ -71,17 +71,10 @@ dependency8.type=UsesDependency
 dependency9.from=Pedido
 dependency9.to=Cliente
 dependency9.type=UsesDependency
-<<<<<<< Updated upstream:TP4/Nueva carpeta/package.bluej
 editor.fx.0.height=736
 editor.fx.0.width=1382
 editor.fx.0.x=-8
 editor.fx.0.y=-8
-=======
-editor.fx.0.height=724
-editor.fx.0.width=808
-editor.fx.0.x=100
-editor.fx.0.y=115
->>>>>>> Stashed changes:TP4/package.bluej
 objectbench.height=90
 objectbench.width=1324
 package.divider.horizontal=0.6

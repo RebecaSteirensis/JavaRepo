@@ -51,7 +51,7 @@ public class OrdenVector
         }
         
         for(int i = 0; i < 4; i++){
-            System.out.print(numeros[i] + "\t");
+            System.out.println(numeros[i] + "\t");
         }
     }
 }

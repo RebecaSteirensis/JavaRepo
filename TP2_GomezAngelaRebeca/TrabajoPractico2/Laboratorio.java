@@ -130,8 +130,7 @@ public class Laboratorio
      * modificar el estado del atributo compraMinima por el estado recibido por parametro. 
      * @param p_compraMin
      */
-    public void nuevaCompraMinima(int p_compraMin)
-    {
+    public void nuevaCompraMinima(int p_compraMin){
         this.setCompraMinima(p_compraMin);
     }
     
