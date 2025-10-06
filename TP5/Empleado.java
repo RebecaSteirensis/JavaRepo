@@ -44,8 +44,9 @@ public class Empleado extends Persona
     *@param double p_importe
     *@param Calendar p_fecha
     */
-    public Empleado(long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha)
+    public Empleado(int p_dni, long p_cuil, String p_apellido, String p_nombre, double p_importe, Calendar p_fecha, int p_anio)
     {
+        super(p_dni, p_nombre, p_apellido, p_anio);
         this.setCuil(p_cuil);
         this.setApellido(p_apellido);
         this.setNombre(p_nombre);
@@ -242,7 +243,7 @@ public class Empleado extends Persona
      * Emplea 3 System.out.println para visualizar por consola las tres cadenas de texto.
      */
     public void mostrar(){
-        System.out.println("Nombre y Apellido: " + nomYApe());
+        super.mostrar();
         System.out.println("CUIL: " + getCuil() + " Antigüedad: " + antiguedad() + " años de servicio");
         System.out.println("Sueldo neto: $" + sueldoNeto());
     }
