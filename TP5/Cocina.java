@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Cocina here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Cocina - Trabajo Practico 5
  */
 
 public class Cocina extends ArtefactoHogar{

@@ -1,20 +1,10 @@
-
-/**
- * Write a description of class Jardin here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Jardin - Trabajo Practico 5
  */
+
 import java.util.ArrayList;
 
-/**
- * Clase que representa un jardín compuesto por una lista de figuras geométricas.
- * Permite calcular el área total, la cantidad de litros de pintura necesarios y el
- * número de latas requeridas para cubrir el área.
- *
- * @author Mauro Gonzalez y Clara Gomez
- * @version 16/10/2024
- */
 public class Jardin {
     private String nombre;
     private ArrayList<FiguraGeometrica> figuras;
@@ -63,7 +53,7 @@ public class Jardin {
     }
 
     public boolean quitarFigura(FiguraGeometrica p_figura){
-        return this.getFiguras().add(p_figura);
+        return this.getFiguras().remove(p_figura);
     }
 
     //metodos

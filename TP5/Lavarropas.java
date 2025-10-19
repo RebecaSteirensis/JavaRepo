@@ -1,10 +1,8 @@
-
-/**
- * Write a description of class Lavarropas here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Lavarropas - Trabajo Practico 5
  */
+
 public class Lavarropas extends ArtefactoHogar{
     private int programas;
     private float kilos;

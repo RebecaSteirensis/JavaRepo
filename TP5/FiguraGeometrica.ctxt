@@ -1,20 +1,20 @@
 #BlueJ class context
 comment0.target=FiguraGeometrica
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ FiguraGeometrica\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\ \n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \n\ Clase\ abstracta\ FiguraGeometrica\ -\ Trabajo\ Practico\ 5\n
 comment1.params=p_origen
 comment1.target=FiguraGeometrica(Punto)
-comment1.text=\r\n\ Constructor\ de\ la\ clase\ FiguraGeometrica.\r\n\r\n\ @param\ p_origen\ el\ punto\ que\ representa\ el\ origen\ de\ la\ figura\r\n
+comment1.text=\n\ Constructor\ de\ la\ clase\ FiguraGeometrica.\n\n\ @param\ p_origen\ el\ punto\ que\ representa\ el\ origen\ de\ la\ figura\n
 comment2.params=
 comment2.target=Punto\ getOrigen()
 comment3.params=p_origen
 comment3.target=void\ setOrigen(Punto)
 comment4.params=
 comment4.target=java.lang.String\ nombreFigura()
-comment4.text=\r\n\ M\u00E9todo\ abstracto\ que\ debe\ ser\ implementado\ por\ las\ subclases\ para\ retornar\ el\ nombre\ de\ la\ figura.\r\n\r\n\ @return\ el\ nombre\ de\ la\ figura\ geom\u00E9trica\r\n
+comment4.text=\n\ M\u00E9todo\ abstracto\ que\ debe\ ser\ implementado\ por\ las\ subclases\ para\ retornar\ el\ nombre\ de\ la\ figura.\n\n\ @return\ el\ nombre\ de\ la\ figura\ geom\u00E9trica\n
 comment5.params=
 comment5.target=double\ superficie()
-comment5.text=\r\n\ M\u00E9todo\ abstracto\ que\ debe\ ser\ implementado\ por\ las\ subclases\ para\ calcular\ la\ superficie\ de\ la\ figura.\r\n\r\n\ @return\ la\ superficie\ de\ la\ figura\ geom\u00E9trica\r\n
+comment5.text=\n\ M\u00E9todo\ abstracto\ que\ debe\ ser\ implementado\ por\ las\ subclases\ para\ calcular\ la\ superficie\ de\ la\ figura.\n\n\ @return\ la\ superficie\ de\ la\ figura\ geom\u00E9trica\n
 comment6.params=
 comment6.target=void\ mostrarSuperficie()
-comment6.text=\r\n\ Muestra\ en\ pantalla\ el\ nombre\ de\ la\ figura\ y\ su\ superficie.\r\n
+comment6.text=\n\ Muestra\ en\ pantalla\ el\ nombre\ de\ la\ figura\ y\ su\ superficie.\n
 numComments=7

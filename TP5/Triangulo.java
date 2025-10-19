@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Triangulo here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Triangulo - Trabajo Practico 5
  */
 
 public class Triangulo extends  FiguraGeometrica{

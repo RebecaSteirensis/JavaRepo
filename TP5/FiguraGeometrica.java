@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class FiguraGeometrica here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase abstracta FiguraGeometrica - Trabajo Practico 5
  */
 
 public abstract class FiguraGeometrica {

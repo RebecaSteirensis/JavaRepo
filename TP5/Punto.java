@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Punto here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Punto - Trabajo Practico 5
  */
 
 public class Punto

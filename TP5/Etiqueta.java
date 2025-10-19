@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Etiqueta here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Abstracta Etiqueta - Trabajo Practico 5
  */
 
 public abstract class Etiqueta {

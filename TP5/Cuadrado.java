@@ -1,10 +1,3 @@
-
-/**
- * Write a description of class Cuadrado here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Cuadrado extends Rectangulo{
 
     public Cuadrado(Punto p_origen, double p_lado){
@@ -17,7 +10,7 @@ public class Cuadrado extends Rectangulo{
 
     public void caracteristicas(){
         System.out.println(this.nombreFigura());
-        System.out.println("Origen: " + this.getOrigen().coordenadas() + " - Lado: " + this.getAlto());
-        System.out.println("Superficie: " + this.superficie() + " - Perimetro: " + this.perimetro());
+        System.out.println("Origen: " + super.getPunto().coordenadas() + " - Lado: " + super.getAlto());
+        System.out.println("Superficie: " + super.superficie() + " - Perimetro: " + super.perimetro());
     }
 }

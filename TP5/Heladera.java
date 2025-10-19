@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Heladera here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Heladera - Trabajo Practico 5
  */
 
 public class Heladera extends ArtefactoHogar{

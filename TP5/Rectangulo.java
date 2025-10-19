@@ -1,134 +1,143 @@
-
-/**
- * Write a description of class Rectangulo here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Rectangulo - Trabajo Practico 5
  */
 public class Rectangulo extends FiguraGeometrica
 {
+    /**
+    *Atributos de la Clase 
+    */
+    private Punto origen;
     private double ancho;
     private double alto;
 
     /**
-     * costructor de la clase Rectangulo
-     * @param p_origen origen
-     * @param p_ancho ancho
-     * @param p_alto alto
-     */
+    *Constructor con parametros, instancia un objeto de la clase
+    *@param Punto p_origen
+    *@param double p_ancho
+    *@param double p_alto
+    */
     public Rectangulo(Punto p_origen, double p_ancho, double p_alto)
     {
         super(p_origen);
         this.setAncho(p_ancho);
-        this.setAlto(p_alto);
+        this.setAlto(p_alto);     
     }
 
     /**
-     * costructor de la clase Rectangulo
-     * @param p_ancho ancho
-     * @param p_alto alto
-     */
-    public Rectangulo(double p_ancho, double p_alto)
-    {
-        super(new Punto(0.0, 0.0));
+    *Constructor con parametros, instancia un objeto de la clase
+    *@param double p_ancho
+    *@param double p_alto
+    */
+    public Rectangulo (double p_ancho, double p_alto)
+    {   
+        super(new Punto());
         this.setAncho(p_ancho);
         this.setAlto(p_alto);
     }
     
-    //accessors
-    private void setAncho(double p_ancho)
-    {
+    /**
+    *Setter,recibe un double y permite modificar el valor de el atributo ancho
+    *@param double p_ancho
+    */
+    private void setAncho(double p_ancho){
         this.ancho = p_ancho;
     }
     
-    private void setAlto(double p_alto)
-    {
+    /**
+    *Setter,recibe un double y permite modificar el valor de el atributo alto
+    *@param double p_alto
+    */
+    private void setAlto(double p_alto){
         this.alto = p_alto;
     }
-
+    
     /**
-     * Devuelve el ancho
-     * @return ancho
-     */
-    public double getAncho()
-    {
+    *Setter,recibe un Punto y permite modificar el valor de el atributo origen
+    *@param Punto p_origen
+    */
+    private void setPunto(Punto p_origen){
+        this.origen = p_origen;
+    }
+    
+    /**
+    *Getter, permite obtener el valor de el atributo ancho
+    *@return devuelve un double
+    */
+    public double getAncho(){
         return this.ancho;
     }
-
+    
     /**
-     * Devuelve el Ato
-     * @return alto
-     */
-    public double getAlto()
-    {
+    *Getter, permite obtener el valor de el atributo alto
+    *@return devuelve un double
+    */
+    public double getAlto(){
         return this.alto;
     }
-
-
-    //metodos
-
+    
     /**
-     * Desplaza el origen usaldo el metodo desplazar de clase Punto
-     * @param p_dx dx
-     * @param p_dy dy
-     */
-    public void desplazar(double p_dx, double p_dy)
-    {
-        this.getOrigen().desplazar(p_dx, p_dy);
+    *Getter, permite obtener el valor de el atributo origen
+    *@return devuelve un Punto
+    */
+    public Punto getPunto(){
+        return this.origen;
     }
-
+    
     /**
-     * Muestra los datos del Rectangulo
-     */
-    public void caracteristicas()
-    {
+    *Metodo publico,recibe 2 parametros y los utiliza para desplazar las coordenadas del origen del rectangulo
+    */
+    public void desplazar(double p_dx, double p_dy){
+        this.getPunto().desplazar(p_dx, p_dy);
+    }
+    
+    /**
+    *Metodo publico,muestra por pantalla las caracteristicas del rectangulo
+    */
+    public void caracteristicas(){
         System.out.println(this.nombreFigura());
-        System.out.println("Origen: " + this.getOrigen().coordenadas() + " -  Alto: " + this.getAlto() + " -  Ancho: " + this.getAncho());
-        System.out.println("Superficie: " + this.superficie() + " -  Perimetro: " + this.perimetro());
+        System.out.println("Origen: (" + this.getPunto().coordenadas() + ") - Alto: " + this.getAlto() + " - Ancho: " + this.getAncho());
+        System.out.println("Superficie: " + this.superficie() + " - Perimetro: " + this.perimetro());
     }
-
+    
     /**
-     * Calgula y devuelve el perimetro
-     * @return alto + ancho
-     */
-    public double perimetro()
-    {
-        return (this.getAlto() +  this.getAncho()) * 2;
+    *Metodo publico,calcula el perimetro del rectangulo
+    *@return devuelve un double
+    */
+    public double perimetro(){
+        return 2 * (this.getAlto() + this.getAncho());
     }
-
+    
     /**
-     * Calcula y devuelve la superficie/area del rectangulo
-     * @return ancho * alto
-     */
-    public double superficie()
-    {
+    *Metodo publico,calcula la superficie del rectangulo
+    *@return devuelve un double
+    */
+    public double superficie(){
         return this.getAncho() * this.getAlto();
     }
-
+    
     /**
-     * Devuelve la distancia entre dos objetos de clase Rectangulo
-     * @param otroRectangulo otro rectangulo
-     * @return distancia
-     */
-    public double distanciaA(Rectangulo otroRectangulo)
-    {
-        return this.getOrigen().distanciaA(otroRectangulo.getOrigen());
+    *Metodo publico,recibe un rectangulo por parametro y lo compara con el que ejecuto la accion para saber la distancia entre estos
+    *@param Rectangulo otroRectangulo
+    *@return devuelve un double
+    */
+    public double distanciaA(Rectangulo otroRectangulo){
+        return this.getPunto().distanciaA(otroRectangulo.getPunto());
     }
-
+    
     /**
-     * Devuelve el objeto de clase Rectangulo que tenga mayor superficie
-     * @param otroRectangulo otro rectangulo
-     * @return objeto de clase rectangulo que sea mayor
-     */
+    * Metodo publico,recibe un rectangulo por parametro y lo compara con el que ejecuto la accion para saber cual es el mayor
+    * @param Rectangulo otroRectangulo
+    * @return devuelve un Rectangulo
+    */
     public Rectangulo elMayor(Rectangulo otroRectangulo){
-        if (this.superficie() > otroRectangulo.superficie()){
+        if(this.superficie() > otroRectangulo.superficie()){
             return this;
-        }
-        else{
+        } else {
             return otroRectangulo;
         }
     }
-
+    
     public String nombreFigura(){
         return "***** Rectangulo *****";
     }

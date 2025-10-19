@@ -1,3 +1,8 @@
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Servicio - Trabajo Practico 5
+ */
+
 public class Servicio {
     private String descripcion;
     private double precio;

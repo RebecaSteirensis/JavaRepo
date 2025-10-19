@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Elipse here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Elipse - Trabajo Practico 5
  */
 
 public class Elipse extends FiguraGeometrica{
@@ -56,7 +53,7 @@ public class Elipse extends FiguraGeometrica{
      */
     public void caracteristicas(){
         System.out.println(this.nombreFigura());
-        System.out.println("Centro: " + this.getOrigen().coordenadas() + " - Semieje Mayor: " + this.getEjeMayor() + " - Semieje Menor: " + this.getEjeMenor());
+        System.out.println("Centro: " + super.getOrigen().coordenadas() + " - Semieje Mayor: " + this.getEjeMayor() + " - Semieje Menor: " + this.getEjeMenor());
         System.out.println("Superficie: " + this.superficie());
     }
 

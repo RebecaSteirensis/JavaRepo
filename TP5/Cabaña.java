@@ -1,10 +1,8 @@
-
-/**
- * Write a description of class Cabaña here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Cabaña - Trabajo Practico 5
  */
+
 public class Cabaña extends Alojamiento {
     private int nroHabitaciones;
 
@@ -63,7 +61,9 @@ public class Cabaña extends Alojamiento {
      */
     @Override
     public int contar(String p_alojamiento) {
-        if (p_alojamiento.toLowerCase().contains("cabaña")) return 1;
+        if (p_alojamiento.toLowerCase().contains("cabaña")) {
+           return 1; 
+        }
         return 0;
     }
 
@@ -75,7 +75,7 @@ public class Cabaña extends Alojamiento {
     public void liquidar() {
         super.liquidar();
         System.out.println("Cabaña con " + this.getNroHabitaciones() + " habitaciones");
-        System.out.println("Total: ------> $" + (this.costo() + this.costoServicios()));
+        System.out.println("Total: ------> $" + (this.costo() + super.costoServicios()));
     }
 }
 

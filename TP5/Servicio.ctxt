@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Servicio
+comment0.text=\ \n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \n\ Clase\ Servicio\ -\ Trabajo\ Practico\ 5\n
 comment1.params=p_descripcion\ p_precio
 comment1.target=Servicio(java.lang.String,\ double)
 comment2.params=
