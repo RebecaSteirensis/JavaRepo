@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Lavarropas
+comment0.text=\ \r\n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \r\n\ Clase\ Lavarropas\ -\ Trabajo\ Practico\ 5\r\n
+comment1.params=p_marca\ p_precio\ p_stock\ p_programas\ p_kilos\ p_automatico
+comment1.target=Lavarropas(java.lang.String,\ float,\ int,\ int,\ float,\ boolean)
+comment1.text=\r\n\ Constructor\ para\ inicializar\ una\ instancia\ de\ Lavarropas.\r\n\r\n\ @param\ p_marca\ \ \ \ \ \ marca\ del\ lavarropas\r\n\ @param\ p_precio\ \ \ \ \ precio\ del\ lavarropas\r\n\ @param\ p_stock\ \ \ \ \ \ cantidad\ en\ stock\r\n\ @param\ p_programas\ \ cantidad\ de\ programas\ disponibles\r\n\ @param\ p_kilos\ \ \ \ \ \ capacidad\ en\ kilos\ de\ carga\r\n\ @param\ p_automatico\ indica\ si\ el\ lavarropas\ es\ autom\u00E1tico\r\n
+comment2.params=
+comment2.target=int\ getProgramas()
+comment3.params=p_programas
+comment3.target=void\ setProgramas(int)
+comment4.params=
+comment4.target=float\ getKilos()
+comment5.params=p_kilos
+comment5.target=void\ setKilos(float)
+comment6.params=
+comment6.target=boolean\ getAutomatico()
+comment7.params=p_automatico
+comment7.target=void\ setAutomatico(boolean)
+comment8.params=
+comment8.target=void\ imprimir()
+comment8.text=\r\n\ Imprime\ los\ detalles\ del\ lavarropas,\ incluyendo\ sus\ atributos\ espec\u00EDficos\ como\r\n\ programas,\ kilos\ de\ carga\ y\ si\ es\ autom\u00E1tico.\r\n
+comment9.params=p_cuotas\ p_interes
+comment9.target=float\ creditoConAdicional(int,\ float)
+comment9.text=\r\n\ Calcula\ la\ cuota\ de\ cr\u00E9dito\ con\ un\ descuento\ si\ el\ lavarropas\ no\ es\ autom\u00E1tico.\r\n\ Si\ no\ es\ autom\u00E1tico,\ se\ aplica\ un\ 20%\ de\ descuento\ a\ la\ cuota\ de\ cr\u00E9dito\ base.\r\n\r\n\ @param\ p_cuotas\ \ \ n\u00FAmero\ de\ cuotas\r\n\ @param\ p_interes\ \ porcentaje\ de\ inter\u00E9s\ aplicado\r\n\ @return\ el\ costo\ de\ cada\ cuota,\ con\ el\ descuento\ si\ corresponde\r\n
+numComments=10

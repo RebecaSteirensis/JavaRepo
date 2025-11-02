@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Cocina
+comment0.text=\ \r\n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \r\n\ Clase\ Cocina\ -\ Trabajo\ Practico\ 5\r\n
+comment1.params=p_marca\ p_precio\ p_stock\ p_hornallas\ p_calorias\ p_dimensiones
+comment1.target=Cocina(java.lang.String,\ float,\ int,\ int,\ int,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ para\ inicializar\ una\ instancia\ de\ Cocina.\r\n\r\n\ @param\ p_marca\ \ \ \ \ \ \ marca\ de\ la\ cocina\r\n\ @param\ p_precio\ \ \ \ \ \ precio\ de\ la\ cocina\r\n\ @param\ p_stock\ \ \ \ \ \ \ cantidad\ en\ stock\r\n\ @param\ p_hornallas\ \ \ n\u00FAmero\ de\ hornallas\ de\ la\ cocina\r\n\ @param\ p_calorias\ \ \ \ cantidad\ de\ calor\u00EDas\ de\ la\ cocina\r\n\ @param\ p_dimensiones\ dimensiones\ de\ la\ cocina\r\n
+comment2.params=
+comment2.target=int\ getHornallas()
+comment3.params=p_hornallas
+comment3.target=void\ setHornallas(int)
+comment4.params=
+comment4.target=int\ getCalorias()
+comment5.params=p_calorias
+comment5.target=void\ setCalorias(int)
+comment6.params=
+comment6.target=java.lang.String\ getDimensiones()
+comment7.params=p_dimensiones
+comment7.target=void\ setDimensiones(java.lang.String)
+comment8.params=
+comment8.target=void\ imprimir()
+comment8.text=\r\n\ Imprime\ la\ informaci\u00F3n\ detallada\ de\ la\ cocina,\ incluyendo\ atributos\ espec\u00EDficos\ como\r\n\ hornallas,\ calor\u00EDas\ y\ dimensiones.\r\n
+comment9.params=p_cuotas\ p_interes
+comment9.target=float\ creditoConAdicional(int,\ float)
+comment9.text=\r\n\ Calcula\ la\ cuota\ de\ cr\u00E9dito\ con\ un\ adicional\ espec\u00EDfico\ para\ la\ cocina.\r\n\r\n\ @param\ p_cuotas\ \ \ n\u00FAmero\ de\ cuotas\r\n\ @param\ p_interes\ \ porcentaje\ de\ inter\u00E9s\ aplicado\r\n\ @return\ el\ costo\ total\ de\ la\ cuota\ con\ intereses\r\n
+numComments=10

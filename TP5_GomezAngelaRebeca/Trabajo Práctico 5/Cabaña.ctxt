@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Caba\u00F1a
+comment1.params=p_nombre\ p_precioBase\ p_diasAlquiler\ p_nroHabitaciones
+comment1.target=Caba\u00F1a(java.lang.String,\ double,\ int,\ int)
+comment1.text=\r\n\ Constructor\ para\ crear\ una\ instancia\ de\ Caba\u00F1a.\r\n\r\n\ @param\ p_nombre\ \ \ \ \ \ \ \ \ Nombre\ de\ la\ caba\u00F1a.\r\n\ @param\ p_precioBase\ \ \ \ \ Precio\ base\ por\ d\u00EDa\ de\ alquiler.\r\n\ @param\ p_diasAlquiler\ \ \ D\u00EDas\ de\ alquiler\ de\ la\ caba\u00F1a.\r\n\ @param\ p_nroHabitaciones\ N\u00FAmero\ de\ habitaciones\ de\ la\ caba\u00F1a.\r\n
+comment2.params=
+comment2.target=int\ getNroHabitaciones()
+comment2.text=\r\n\ Obtiene\ el\ n\u00FAmero\ de\ habitaciones\ de\ la\ caba\u00F1a.\r\n\r\n\ @return\ n\u00FAmero\ de\ habitaciones.\r\n
+comment3.params=p_nroHabitaciones
+comment3.target=void\ setNroHabitaciones(int)
+comment3.text=\r\n\ Establece\ el\ n\u00FAmero\ de\ habitaciones\ de\ la\ caba\u00F1a.\r\n\r\n\ @param\ p_nroHabitaciones\ n\u00FAmero\ de\ habitaciones.\r\n
+comment4.params=
+comment4.target=double\ costo()
+comment4.text=\r\n\ Calcula\ el\ costo\ total\ de\ la\ caba\u00F1a,\ incluyendo\ el\ precio\ base\ y\ un\ costo\ adicional\r\n\ por\ la\ cantidad\ de\ habitaciones.\r\n\r\n\ @return\ costo\ total\ del\ alquiler\ de\ la\ caba\u00F1a.\r\n
+comment5.params=p_alojamiento
+comment5.target=int\ contar(java.lang.String)
+comment5.text=\r\n\ Cuenta\ la\ caba\u00F1a\ si\ el\ nombre\ especificado\ coincide\ con\ el\ tipo\ "caba\u00F1a".\r\n\r\n\ @param\ p_alojamiento\ nombre\ o\ tipo\ de\ alojamiento\ a\ contar.\r\n\ @return\ 1\ si\ el\ nombre\ coincide\ con\ "caba\u00F1a",\ 0\ en\ caso\ contrario.\r\n
+comment6.params=
+comment6.target=void\ liquidar()
+comment6.text=\r\n\ Imprime\ el\ desglose\ de\ los\ costos\ del\ alquiler\ de\ la\ caba\u00F1a,\ incluyendo\ el\ costo\ de\ alquiler,\r\n\ costo\ de\ servicios\ adicionales,\ y\ la\ cantidad\ de\ habitaciones.\r\n
+numComments=7

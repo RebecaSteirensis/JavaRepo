@@ -8,7 +8,7 @@ import java.util.*;
 public class Producto
 {
     /**
-     * Atributos de la clase
+     * Atributos de la clase Producto con variable de instancia Laboratorio2
     */
     // Atributos
     private int codigo;

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Visitante
-comment0.text=\ \n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \n\ Clase\ Abstracta\ Visitante\ -\ Trabajo\ Practico\ 5\n
+comment0.text=\ \r\n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \r\n\ Clase\ Abstracta\ Visitante\ -\ Trabajo\ Practico\ 5\r\n
 comment1.params=p_nombre\ p_fechaVisita
 comment1.target=Visitante(java.lang.String,\ java.util.Calendar)
 comment10.params=
