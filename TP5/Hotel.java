@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Hotel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Hotel - Trabajo Practico 5
  */
 
 public class Hotel extends Alojamiento {
@@ -74,7 +71,9 @@ public class Hotel extends Alojamiento {
      */
     @Override
     public int contar(String p_alojamiento) {
-        if (p_alojamiento.toLowerCase().contains("hotel")) return 1;
+        if (p_alojamiento.toLowerCase().contains("hotel")) {
+           return 1; 
+        }
         return 0;
     }
 
@@ -86,7 +85,7 @@ public class Hotel extends Alojamiento {
     public void liquidar() {
         super.liquidar();
         System.out.println("Habitacion " + this.getTipoHabitacion());
-        System.out.println("Total: ------> $" + (this.costo() + this.costoServicios()));
+        System.out.println("Total: ------> $" + (this.costo() + super.costoServicios()));
     }
 }
 

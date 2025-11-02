@@ -1,10 +1,8 @@
-
-/**
- * Write a description of class Premiun here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Premium - Trabajo Practico 5
  */
+
 public class Premium extends Etiqueta{
     private int colores;
 
@@ -52,7 +50,7 @@ public class Premium extends Etiqueta{
     @Override
     public double precio(int q) {
 
-        return  (this.getCosto() + this.adicional())  * q;
+        return  (super.getCosto() + this.adicional())  * q;
     }
 
     /**

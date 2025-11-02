@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Circulo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Circulo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\ \n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \n\ Clase\ Circulo\ -\ Trabajo\ Practico\ 5\n
 comment1.params=p_radio\ p_centro
 comment1.target=Circulo(double,\ Punto)
-comment1.text=\r\n\ Constructor\ de\ la\ clase\ Circulo\r\n\ @param\ p_radio\ radio\r\n\ @param\ p_centro\ centro\r\n
+comment1.text=\n\ Constructor\ de\ la\ clase\ Circulo\n\ @param\ p_radio\ radio\n\ @param\ p_centro\ centro\n
 comment2.params=
 comment2.target=Circulo()
-comment2.text=\r\n\ Constructor\ de\ la\ clase\ Circulo\r\n
+comment2.text=\n\ Constructor\ de\ la\ clase\ Circulo\n
 comment3.params=
 comment3.target=java.lang.String\ nombreFigura()
-comment3.text=\r\n\ Devuelve\ un\ String\ de\ "*****\ Circulo\ *****"\r\n\ @return\ el\ nombre\ de\ la\ figura\r\n
+comment3.text=\n\ Devuelve\ un\ String\ de\ "*****\ Circulo\ *****"\n\ @return\ el\ nombre\ de\ la\ figura\n
 comment4.params=
 comment4.target=void\ caracteristicas()
-comment4.text=\r\n\ Imprime\ las\ caracteristicas\ del\ Circulo\r\n
+comment4.text=\n\ Imprime\ las\ caracteristicas\ del\ Circulo\n
 numComments=5

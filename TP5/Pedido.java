@@ -1,9 +1,7 @@
 import java.util.ArrayList;
-/**
- * Write a description of class Pedido here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Pedido - Trabajo Practico 5
  */
 
 public class Pedido {
@@ -65,7 +63,11 @@ public class Pedido {
      * @return true si el renglón fue eliminado, false de lo contrario.
      */
     public boolean quitarRenglon(Renglon p_renglon){
-        return this.getRenglones().remove(p_renglon);
+        if(this.getRenglones().size() == 1){
+            return false;
+        } else{
+            return this.getRenglones().remove(p_renglon);
+        }
     }
 
     /**

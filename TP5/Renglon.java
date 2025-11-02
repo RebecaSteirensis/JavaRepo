@@ -1,9 +1,8 @@
-/**
- * Write a description of class Renglon here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Renglon - Trabajo Practico 5
  */
+
 public class Renglon {
     private int cantidad;
     private double importe;
@@ -16,10 +15,10 @@ public class Renglon {
      * @param p_cantidad Cantidad de etiquetas.
      * @param p_item Etiqueta correspondiente a este renglón.
      */
-    public Renglon(int p_cantidad, Etiqueta p_item) {
+    public Renglon(int p_cantidad, double p_importe, Etiqueta p_item) {
         this.setCantidad(p_cantidad);
         this.setItem(p_item);
-        this.setImporte(p_item.getCosto());
+        this.setImporte(p_importe);
     }
 
     //accessors
@@ -84,6 +83,6 @@ public class Renglon {
      * cantidad y detalles de la etiqueta.
      */
     public void mostrar(){
-        System.out.println(this.getCantidad() + "Etiquetas de " + this.getItem().toString());
+        System.out.println(this.getCantidad() + " Etiquetas de " + this.getItem().toString());
     }
 }

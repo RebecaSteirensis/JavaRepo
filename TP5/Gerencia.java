@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-/**
- * Write a description of class Gerencia here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Gerencia - Trabajo Practico 5
  */
+
 public class Gerencia {
     private String nombre;
     private ArrayList<Alojamiento> alojamientosAlquilados;
@@ -127,4 +126,3 @@ public class Gerencia {
         System.out.println("Alojamiento tipo Hotel ----> " + this.contarAlojamiento("hotel"));
     }
 }
-

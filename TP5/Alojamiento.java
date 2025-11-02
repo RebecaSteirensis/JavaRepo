@@ -1,10 +1,9 @@
-import java.util.ArrayList;
-/**
- * Write a description of class Alojamiento here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Abstracta Alojamiento - Trabajo Practico 5
  */
+
+import java.util.ArrayList;
 
 public abstract class Alojamiento {
     private String nombre;

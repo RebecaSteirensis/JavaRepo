@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Exclusivo
+comment0.text=\ \n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \n\ Clase\ Exclusivo\ -\ Trabajo\ Practico\ 5\n
+comment1.params=p_nombreCargo\ p_sueldoBasico\ p_anioIngreso\ p_horasDeDocencia\ p_horasDeInvestigacion\ p_horasDeExtension
+comment1.target=Exclusivo(java.lang.String,\ double,\ int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=int\ getHorasDeInvestigacion()
+comment3.params=
+comment3.target=int\ getHorasDeExtension()
+comment4.params=p_horasDeInvestigacion
+comment4.target=void\ setHorasDeInvestigacion(int)
+comment5.params=p_horasDeExtension
+comment5.target=void\ setHorasDeExtension(int)
+comment6.params=
+comment6.target=void\ mostrarCargo()
+numComments=7

@@ -1,10 +1,8 @@
-
-/**
- * Write a description of class Comun here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Comun - Trabajo Practico 5
  */
+
 public class Comun extends Etiqueta{
     private double plus;
 
@@ -51,7 +49,7 @@ public class Comun extends Etiqueta{
      */
     @Override
     public double precio(int q) {
-        return (q * this.getCosto()) - this.descuento(q) + this.getPlus();
+        return (q * super.getCosto()) - this.descuento(q) + this.getPlus();
     }
 
     /**

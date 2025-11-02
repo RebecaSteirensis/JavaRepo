@@ -1,9 +1,6 @@
-
-/**
- * Write a description of class Circulo here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/** 
+ * @author Fernandez Alejandro Facundo - Gomez Rebeca 
+ * Clase Circulo - Trabajo Practico 5
  */
 public class Circulo extends Elipse{
     /**
@@ -35,7 +32,7 @@ public class Circulo extends Elipse{
      */
     public void caracteristicas(){
         System.out.println(this.nombreFigura());
-        System.out.println("Centro: " + this.getOrigen().coordenadas() + " - Radio: " + this.getEjeMayor());
-        System.out.println("Superficie: " + this.superficie());
+        System.out.println("Centro: " + super.getOrigen().coordenadas() + " - Radio: " + super.getEjeMayor());
+        System.out.println("Superficie: " + super.superficie());
     }
 }
