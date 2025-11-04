@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=CuentaCorriente
+comment0.text=\ \r\n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \r\n\ Clase\ CuentaCorriente\ -\ Trabajo\ Practico\ 5\r\n
+comment1.params=p_nroCuenta\ p_titular\ p_saldo
+comment1.target=CuentaCorriente(int,\ Persona,\ double)
+comment1.text=\r\nConstructor\ con\ parametros,\ instancia\ un\ objeto\r\n@param\ int\ p_nroCuenta\r\n@param\ Persona\ p_titular\r\n@param\ double\ p_saldo\r\n
+comment2.params=
+comment2.target=double\ getLimiteDescubierto()
+comment2.text=\r\nGetter,\ retorna\ el\ valor\ del\ atributo\ limiteDescubierto\r\n@return\ devuelve\ un\ double\r\n
+comment3.params=p_limiteDescubierto
+comment3.target=void\ setLimiteDescubierto(double)
+comment3.text=\r\nSetter,\ recibe\ un\ double\ y\ permite\ modificar\ el\ valor\ del\ atributo\ limiteDescubierto\r\n@param\ double\ p_limite\r\n
+comment4.params=p_importe
+comment4.target=boolean\ puedeExtraer(double)
+comment4.text=\r\n\ Metodo\ privado,\ comprueba\ si\ el\ cliente\ puede\ realizar\ extracciones\r\n@param\ double\ p_importe\r\n@return\ devuelve\ un\ booleano\r\n
+comment5.params=p_importe
+comment5.target=java.lang.String\ xQNoPuedeExtraer(double)
+comment5.text=\r\n\ Metodo\ publido,\ recibe\ un\ importe\ por\ parametro\ y\ devuelve\ un\ String\ del\ motivo\r\n\ de\ la\ imposibilidad\ de\ la\ extraccion\r\n\ @param\ double\ p_importe\r\n\ @return\ String\r\n
+comment6.params=
+comment6.target=void\ mostrar()
+comment6.text=\r\n\ Metodo\ publico,\ muestra\ por\ pantalla\ los\ datos\ de\ la\ caja\ de\ ahorro\ y\ de\ su\ titular\r\n
+numComments=7

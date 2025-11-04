@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=CajaDeAhorro
+comment0.text=\ \r\n\ @author\ Fernandez\ Alejandro\ Facundo\ -\ Gomez\ Rebeca\ \r\n\ Clase\ CajaDeAhorro\ -\ Trabajo\ Practico\ 5\r\n
+comment1.params=p_nroCuenta\ p_titular
+comment1.target=CajaDeAhorro(int,\ Persona)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ CajaDeAhorro\r\n\ @param\ p_nroCuenta\ numero\ de\ cuenta\r\n\ @param\ p_titular\ titular\r\n
+comment2.params=p_nroCuenta\ p_titular\ p_saldo
+comment2.target=CajaDeAhorro(int,\ Persona,\ double)
+comment2.text=\r\n\ Constructor\ de\ la\ clase\ CajaDeAhorro\r\n\ @param\ p_nroCuenta\ numero\ de\ cuenta\r\n\ @param\ p_titular\ titular\r\n\ @param\ p_saldo\ saldo\r\n
+comment3.params=
+comment3.target=int\ getExtraccionesPosibles()
+comment3.text=\r\n\ Devuelve\ las\ Extracciones\ posibles\r\n\ @return\ extracciones\ posibles\r\n
+comment4.params=p_extraccionesPosibles
+comment4.target=void\ setExtraccionesPosibles(int)
+comment4.text=\r\n\ Establece\ el\ n\u00FAmero\ de\ extracciones\ posibles\ para\ la\ cuenta.\r\n\r\n\ @param\ p_extraccionesPosibles\ el\ n\u00FAmero\ de\ extracciones\ permitidas\ a\ establecer\r\n
+comment5.params=p_importe
+comment5.target=boolean\ puedeExtraer(double)
+comment5.text=\r\n\ Metodo\ privado,comprueba\ si\ el\ cliente\ puede\ realizar\ extracciones\r\n@param\ double\ p_importe\r\n@return\ devuelve\ un\ booleano\r\n
+comment6.params=p_importe
+comment6.target=java.lang.String\ xQNoPuedeExtraer(double)
+comment6.text=\r\n\ Metodo\ publido,\ recibe\ un\ importe\ por\ parametro\ y\ devuelve\ un\ String\ del\ motivo\r\n\ de\ la\ imposibilidad\ de\ la\ extraccion\r\n\ @param\ double\ p_importe\r\n\ @return\ String\r\n
+comment7.params=
+comment7.target=void\ mostrar()
+comment7.text=\r\n\ Metodo\ publico,\ muestra\ por\ pantalla\ los\ datos\ de\ la\ caja\ de\ ahorro\ y\ de\ su\ titular\r\n
+numComments=8
